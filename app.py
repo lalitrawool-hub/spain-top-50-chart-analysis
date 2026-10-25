@@ -14,42 +14,50 @@ from src.data_cleaning import load_data
 from src.lifecycle import song_lifecycle, playlist_churn, retention_curve
 from src.metrics import overview_metrics, compare_groups, daily_chart_summary
 
-NAVY = "#14243A"
-INK = "#203047"
-MUTED = "#738092"
-GOLD = "#D5A63B"
-BEIGE = "#F3EFE7"
-PAPER = "#FFFEFB"
-BLUE = "#6483A3"
+BG = "#0B0F17"
+SURFACE = "#131B2E"
+SURFACE_HIGH = "#1E293B"
+TEXT = "#DFE2EE"
+MUTED = "#94A3B8"
+ROSE = "#E11D48"
+AMBER = "#F59E0B"
+CYAN = "#06B6D4"
+MINT = "#10B981"
+SLATE = "#64748B"
 
-st.set_page_config(page_title="Spain Top 50 · Chart Intelligence", page_icon="◈", layout="wide", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="Spain Top 50 · Sonic Intelligence", page_icon="◈", layout="wide", initial_sidebar_state="expanded")
 st.markdown(f"""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
-:root {{ --navy:{NAVY}; --gold:{GOLD}; --paper:{PAPER}; --beige:{BEIGE}; }}
-.stApp {{ background:var(--paper); color:var(--navy); font-family:'DM Sans',sans-serif; }}
-[data-testid="stSidebar"] {{ background:#F4F1EA; border-right:1px solid #E8E2D7; }}
-[data-testid="stSidebar"] * {{ color:var(--navy); }}
-h1,h2,h3 {{ font-family:'Manrope',sans-serif!important; color:var(--navy)!important; letter-spacing:-.035em; }}
-h1 {{ font-weight:800!important; font-size:clamp(1.7rem,4vw,2.65rem)!important; line-height:1.15!important; overflow-wrap:anywhere; }}
-[data-testid="stMetric"] {{ background:white; border:1px solid #EEE9E0; border-radius:15px; padding:19px 21px; box-shadow:0 5px 20px rgba(20,36,58,.045); }}
-[data-testid="stMetricLabel"] {{ color:#738092!important; font-size:.78rem!important; letter-spacing:.055em; text-transform:uppercase; }}
-[data-testid="stMetricValue"] {{ color:var(--navy)!important; font-family:'Manrope',sans-serif; font-weight:700; }}
-[data-testid="stPlotlyChart"] {{ background:#fff; border:1px solid #EEE9E0; border-radius:15px; padding:8px; box-shadow:0 5px 20px rgba(20,36,58,.035); }}
-.eyebrow {{ color:#9A7728; font-weight:700; letter-spacing:.16em; font-size:.71rem; text-transform:uppercase; }}
-.subtitle {{ color:#738092; margin-top:-.55rem; font-size:1rem; }}
-.section-note {{ color:#738092; font-size:.88rem; margin-top:-.55rem; }}
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+:root {{ color-scheme:dark; --bg:{BG}; --surface:{SURFACE}; --surface-high:{SURFACE_HIGH}; --text:{TEXT}; --muted:{MUTED}; --rose:{ROSE}; --amber:{AMBER}; --cyan:{CYAN}; }}
+.stApp {{ background:var(--bg); color:var(--text); font-family:'Plus Jakarta Sans',sans-serif; }}
+[data-testid="stAppViewContainer"], [data-testid="stHeader"] {{ background:var(--bg); }}
+[data-testid="stSidebar"] {{ background:#0A0E16; border-right:1px solid rgba(148,163,184,.13); }}
+[data-testid="stSidebar"] * {{ color:var(--text); }}
+h1,h2,h3,h4 {{ font-family:'Plus Jakarta Sans',sans-serif!important; color:var(--text)!important; letter-spacing:-.025em; }}
+h1 {{ font-weight:800!important; font-size:clamp(1.7rem,3vw,2.5rem)!important; line-height:1.12!important; }}
+[data-testid="stMetric"] {{ background:linear-gradient(145deg,#1E293B,#131B2E); border:1px solid rgba(148,163,184,.12); border-radius:9px; padding:17px 18px; box-shadow:0 8px 22px rgba(0,0,0,.16); min-height:120px; }}
+[data-testid="stMetricLabel"] {{ color:#94A3B8!important; font-family:'JetBrains Mono',monospace; font-size:.69rem!important; letter-spacing:.08em; text-transform:uppercase; }}
+[data-testid="stMetricValue"] {{ color:var(--text)!important; font-family:'JetBrains Mono',monospace; font-weight:700; }}
+[data-testid="stPlotlyChart"], [data-testid="stDataFrame"] {{ background:#131B2E; border:1px solid rgba(148,163,184,.12); border-radius:9px; padding:5px; box-shadow:0 8px 22px rgba(0,0,0,.12); }}
+.eyebrow {{ color:#F59E0B; font-family:'JetBrains Mono',monospace; font-weight:600; letter-spacing:.15em; font-size:.68rem; text-transform:uppercase; }}
+.subtitle {{ color:#94A3B8; margin-top:-.55rem; font-size:.95rem; }}
+.section-note {{ color:#94A3B8; font-size:.82rem; margin-top:-.55rem; }}
+.status-strip {{ background:linear-gradient(110deg,#131B2E,#1E293B); border:1px solid rgba(148,163,184,.13); border-radius:9px; padding:14px 18px; margin:14px 0 20px; }}
+.tag {{ display:inline-block; font:500 .64rem 'JetBrains Mono',monospace; letter-spacing:.08em; text-transform:uppercase; color:#67E8F9; background:rgba(6,182,212,.12); padding:4px 7px; border-radius:3px; }}
+.sidebar-kicker {{ color:#AC8889; font:500 .62rem 'JetBrains Mono',monospace; letter-spacing:.15em; }}
+div[data-testid="stRadio"] label p {{ font-size:.82rem; }}
 div[data-testid="stTabs"] button {{ font-weight:600; }}
 </style>
 """, unsafe_allow_html=True)
 
 
 def polish(fig, height=350):
-    fig.update_layout(height=height, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="white", font=dict(family="DM Sans", color=INK, size=12),
-                      margin=dict(l=18, r=18, t=38, b=18), hoverlabel=dict(bgcolor=NAVY, font_color="white"),
-                      legend=dict(orientation="h", y=1.12, x=0, title=None))
-    fig.update_xaxes(showgrid=False, linecolor="#E7E9ED", zeroline=False)
-    fig.update_yaxes(gridcolor="#EEF0F3", zeroline=False)
+    fig.update_layout(height=height, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor=SURFACE, font=dict(family="Plus Jakarta Sans", color=TEXT, size=11),
+                      margin=dict(l=18, r=18, t=34, b=18), hoverlabel=dict(bgcolor="#0A0E16", font_color=TEXT),
+                      legend=dict(orientation="h", y=1.12, x=0, title=None, font=dict(family="JetBrains Mono", size=9, color=MUTED)))
+    fig.update_xaxes(showgrid=False, linecolor="rgba(148,163,184,.16)", zeroline=False, tickfont=dict(family="JetBrains Mono", size=9, color=MUTED))
+    fig.update_yaxes(gridcolor="rgba(148,163,184,.12)", zeroline=False, tickfont=dict(family="JetBrains Mono", size=9, color=MUTED))
     return fig
 
 
@@ -58,9 +66,17 @@ def get_data():
     return load_data()
 
 
-st.sidebar.markdown('<div class="eyebrow">Chart intelligence</div>', unsafe_allow_html=True)
-st.sidebar.title("Spain Top 50")
-st.sidebar.caption("Explore catalog maturity, release lifecycle and playlist rotation.")
+def metric_cards(items):
+    for start in range(0, len(items), 3):
+        row = items[start:start + 3]
+        for column, (label, value, note, _accent) in zip(st.columns(3), row):
+            with column:
+                st.metric(label, value, help=note)
+
+
+st.sidebar.markdown('<div class="sidebar-kicker">◉ SPAIN TOP 50 // INTELLIGENCE</div>', unsafe_allow_html=True)
+st.sidebar.title("SONIC IBERIA")
+st.sidebar.caption("Chart lifecycle & catalog analytics")
 try:
     raw = get_data()
 except Exception as exc:
@@ -69,7 +85,14 @@ except Exception as exc:
     st.stop()
 
 st.sidebar.divider()
-st.sidebar.subheader("Filters")
+st.sidebar.markdown('<div class="sidebar-kicker">INTELLIGENCE MODULES</div>', unsafe_allow_html=True)
+page = st.sidebar.radio(
+    "Navigate dashboard",
+    ["Lifecycle Radar", "Song Trajectories", "Rotation Dynamics", "Explicit vs Formats", "Track Ledger"],
+    label_visibility="collapsed",
+)
+st.sidebar.divider()
+st.sidebar.markdown('<div class="sidebar-kicker">CHART FILTERS</div>', unsafe_allow_html=True)
 min_date, max_date = raw["date"].min().date(), raw["date"].max().date()
 date_range = st.sidebar.date_input("Chart date range", value=(min_date, max_date), min_value=min_date, max_value=max_date)
 if isinstance(date_range, (tuple, list)) and len(date_range) == 2:
@@ -89,12 +112,12 @@ if selected_artists:
     filtered = filtered[filtered["artist"].isin(selected_artists)]
 filtered = filtered[filtered["album_type"].isin(selected_albums) & filtered["is_explicit"].isin(selected_explicit)]
 st.sidebar.divider()
-st.sidebar.caption(f"Source: `{Path(raw.attrs.get('source_path', 'CSV')).name}`")
-st.sidebar.caption(f"{len(raw):,} valid chart rows · {raw['date'].nunique():,} chart dates")
-
-st.markdown('<div class="eyebrow">Content maturity · release lifecycle · playlist rotation</div>', unsafe_allow_html=True)
-st.title("Spain Top 50 — Chart Intelligence")
-st.markdown('<p class="subtitle">A measured view of what enters, stays, and returns to the chart.</p>', unsafe_allow_html=True)
+st.sidebar.markdown('<div class="sidebar-kicker">SOURCE DATA</div>', unsafe_allow_html=True)
+st.sidebar.caption(f"{Path(raw.attrs.get('source_path', 'CSV')).name}")
+st.sidebar.caption(f"{len(raw):,} valid rows · {raw['date'].nunique():,} chart dates")
+st.markdown('<div class="eyebrow">SPAIN TOP 50 CHART INTELLIGENCE <span class="tag">DATASET VIEW</span></div>', unsafe_allow_html=True)
+st.title(f"Spain Top 50 · {page}")
+st.markdown(f'<div class="status-strip"><span class="tag">CHART HISTORY</span> &nbsp;{start_date:%d %b %Y} — {end_date:%d %b %Y} &nbsp;·&nbsp; {len(filtered):,} matching observations &nbsp;·&nbsp; Source: {Path(raw.attrs.get("source_path", "CSV")).name}</div>', unsafe_allow_html=True)
 if filtered.empty:
     st.warning("No chart rows match these filters. Widen the date range or adjust selections.")
     st.stop()
@@ -102,98 +125,193 @@ if filtered.empty:
 metrics = overview_metrics(filtered)
 life = song_lifecycle(filtered)
 churn = playlist_churn(filtered)
-k1, k2, k3 = st.columns(3)
-k1.metric("Chart dates", f"{metrics['chart_days']:,}")
-k2.metric("Songs in period", f"{metrics['unique_songs']:,}")
-k3.metric("Artists", f"{metrics['artists']:,}")
-k4, k5 = st.columns(2)
-k4.metric("Avg. popularity", f"{metrics['avg_popularity']:.1f}" if pd.notna(metrics["avg_popularity"]) else "—")
-k5.metric("Median lifecycle", f"{life['active_days'].median():.0f} days" if not life.empty else "—")
+latest_date = filtered["date"].max()
+latest = filtered[filtered["date"].eq(latest_date)].copy()
+current_life = life[life["last_seen"].eq(latest_date)].copy()
+mean_turnover = churn.loc[churn["date"].ne(churn["date"].min()), "turnover"].mean()
+metric_cards([
+    ("Chart dates", f"{metrics['chart_days']:,}", "Observed snapshots", CYAN),
+    ("Titles observed", f"{metrics['unique_songs']:,}", "Unique song / artist pairs", ROSE),
+    ("Latest roster", f"{latest['song_key'].nunique():,}", f"As of {latest_date:%d %b %Y}", CYAN),
+    ("Median chart span", f"{life['active_days'].median():.0f} d", "First to last observed date", AMBER),
+    ("Mean popularity", f"{metrics['avg_popularity']:.1f}", "Source popularity field", ROSE),
+    ("Mean entry turnover", f"{mean_turnover:.1%}" if pd.notna(mean_turnover) else "—", "New titles / chart size", AMBER),
+])
 
-tab_overview, tab_lifecycle, tab_content = st.tabs(["Overview", "Lifecycle & rotation", "Content & release mix"])
-with tab_overview:
-    st.subheader("Chart pulse")
-    st.markdown('<p class="section-note">Rank and popularity averages across the selected chart dates. Lower rank values indicate a stronger position.</p>', unsafe_allow_html=True)
-    daily = daily_chart_summary(filtered)
-    left, right = st.columns([1.35, 1])
-    with left:
-        rank_fig = go.Figure()
-        rank_fig.add_trace(go.Scatter(x=daily["date"], y=daily["avg_position"], mode="lines", name="Average rank", line=dict(color=BLUE, width=2.5), fill="tozeroy", fillcolor="rgba(100,131,163,.10)"))
-        rank_fig.update_yaxes(autorange="reversed", title="Average position")
-        rank_fig.update_xaxes(title=None)
-        st.plotly_chart(polish(rank_fig), width="stretch", config={"displayModeBar": False})
-    with right:
-        pop_fig = px.line(daily, x="date", y="avg_popularity", color_discrete_sequence=[GOLD], labels={"date": "Date", "avg_popularity": "Avg. popularity"})
-        pop_fig.update_traces(line_width=2.5, fill="tozeroy", fillcolor="rgba(213,166,59,.12)")
-        st.plotly_chart(polish(pop_fig), width="stretch", config={"displayModeBar": False})
-    st.subheader("Songs with the longest observed chart span")
-    top_life = life.head(12).sort_values("active_days")
-    fig = px.bar(top_life, x="active_days", y="song", orientation="h", color="mean_position", color_continuous_scale=["#D5A63B", "#6483A3", NAVY],
-                 hover_data={"artist": True, "chart_entries": True, "best_position": True, "active_days": True}, labels={"active_days": "Days from first to last appearance", "song": "Song", "mean_position": "Mean rank"})
-    fig.update_layout(coloraxis_colorbar=dict(title="Mean<br>rank", thickness=10))
-    st.plotly_chart(polish(fig, max(330, len(top_life) * 31)), width="stretch", config={"displayModeBar": False})
-
-with tab_lifecycle:
-    st.subheader("Lifecycle and playlist rotation")
-    st.markdown('<p class="section-note">Span includes the first and last observed dates; active chart entries count snapshots. A gap between appearances remains a gap.</p>', unsafe_allow_html=True)
-    c1, c2 = st.columns([1.1, 1])
+if page == "Lifecycle Radar":
+    st.markdown("### Lifecycle stages · latest observed roster")
+    st.markdown('<p class="section-note">Bands use each title’s distinct chart appearances within the selected window: New 1–7, Developing 8–30, Established 31–90, Long-running 91+ chart dates.</p>', unsafe_allow_html=True)
+    stage_order = ["New", "Developing", "Established", "Long-running"]
+    current_life["stage"] = pd.cut(
+        current_life["observed_days"], bins=[0, 7, 30, 90, float("inf")],
+        labels=stage_order, include_lowest=True,
+    )
+    stages = current_life.groupby("stage", observed=False).size().reindex(stage_order, fill_value=0).rename("titles").reset_index()
+    stages["share"] = stages["titles"] / max(stages["titles"].sum(), 1)
+    stage_colors = {"New": "#8B5CF6", "Developing": MINT, "Established": ROSE, "Long-running": AMBER}
+    c1, c2 = st.columns([1, 1.5])
     with c1:
-        age = px.histogram(life, x="active_days", nbins=30, color_discrete_sequence=[BLUE], labels={"active_days": "Observed lifecycle span (days)"})
-        age.update_traces(marker_line_color="white", marker_line_width=1)
-        st.plotly_chart(polish(age), width="stretch", config={"displayModeBar": False})
+        stage_fig = px.bar(stages, x="titles", y="stage", orientation="h", text="titles",
+                           color="stage", color_discrete_map=stage_colors,
+                           labels={"titles": "Titles in latest roster", "stage": "Observed lifecycle"})
+        stage_fig.update_layout(showlegend=False, yaxis={"categoryorder": "array", "categoryarray": stage_order[::-1]})
+        st.plotly_chart(polish(stage_fig, 285), width="stretch", config={"displayModeBar": False}, alt="Latest roster grouped into lifecycle stages by observed chart dates.")
     with c2:
-        churn_fig = go.Figure()
-        churn_fig.add_bar(x=churn["date"], y=churn["entrants"], name="Entrants", marker_color=GOLD)
-        churn_fig.add_bar(x=churn["date"], y=-churn["exits"], name="Exits", marker_color=BLUE)
-        churn_fig.update_layout(barmode="relative", yaxis_title="Songs entering / leaving", xaxis_title=None)
-        st.plotly_chart(polish(churn_fig), width="stretch", config={"displayModeBar": False})
-    turnover_fig = px.line(churn, x="date", y="turnover", color_discrete_sequence=[GOLD],
-                           labels={"date": "Date", "turnover": "Entrants / chart size"})
-    turnover_fig.update_traces(line_width=2.5)
-    turnover_fig.update_yaxes(tickformat=".0%")
-    st.plotly_chart(polish(turnover_fig, 290), width="stretch", config={"displayModeBar": False})
-    st.subheader("Debut cohort retention")
-    st.markdown('<p class="section-note">Weighted share of songs first seen on a chart date that are still present at each elapsed age. Only observed chart snapshots contribute.</p>', unsafe_allow_html=True)
-    retention = retention_curve(filtered)
-    if retention.empty:
-        st.info("Retention is not available for this selection.")
-    else:
-        ret_fig = px.line(retention, x="tenure_day", y="retention_rate", color_discrete_sequence=[GOLD], labels={"tenure_day": "Days since first chart appearance", "retention_rate": "Share still charting"})
-        ret_fig.update_traces(line_width=3, fill="tozeroy", fillcolor="rgba(213,166,59,.13)")
-        ret_fig.update_yaxes(tickformat=".0%", range=[0, 1.02])
-        st.plotly_chart(polish(ret_fig), width="stretch", config={"displayModeBar": False})
-    st.subheader("Song lifecycle detail")
-    display_life = life[["song", "artist", "first_seen", "last_seen", "active_days", "observed_days", "best_position", "mean_popularity", "album_type", "is_explicit"]].copy()
-    display_life["mean_popularity"] = display_life["mean_popularity"].round(1)
-    st.dataframe(display_life, width="stretch", hide_index=True)
+        daily = daily_chart_summary(filtered)
+        rank_fig = go.Figure(go.Scatter(x=daily["date"], y=daily["avg_position"], mode="lines",
+                                        line=dict(color=CYAN, width=2.5), fill="tozeroy",
+                                        fillcolor="rgba(6,182,212,.10)", name="Mean position"))
+        rank_fig.update_yaxes(autorange="reversed", title="Mean chart position")
+        rank_fig.update_xaxes(title=None)
+        st.plotly_chart(polish(rank_fig, 285), width="stretch", config={"displayModeBar": False}, alt="Mean Spain Top 50 chart position over the selected date range.")
 
-with tab_content:
-    st.subheader("Explicit vs. clean")
-    st.markdown('<p class="section-note">Comparisons are descriptive averages over chart rows in the selected period; they do not imply causation.</p>', unsafe_allow_html=True)
-    left, right = st.columns(2)
-    with left:
-        explicit = compare_groups(filtered, "is_explicit")
+    st.markdown("### Rotation flow · recent chart snapshots")
+    st.markdown('<p class="section-note">The initial selected date is a baseline and is excluded from entry turnover. Each following date compares distinct song / artist pairs with the previous available snapshot.</p>', unsafe_allow_html=True)
+    recent_churn = churn.tail(90)
+    churn_fig = go.Figure()
+    churn_fig.add_bar(x=recent_churn["date"], y=recent_churn["entrants"], name="Entries", marker_color=CYAN)
+    churn_fig.add_bar(x=recent_churn["date"], y=-recent_churn["exits"], name="Exits", marker_color=ROSE)
+    churn_fig.update_layout(barmode="relative", yaxis_title="Titles entering / leaving", xaxis_title=None, hovermode="x unified")
+    st.plotly_chart(polish(churn_fig, 310), width="stretch", config={"displayModeBar": False}, alt="Daily titles entering and leaving the chart in the most recent 90 snapshots.")
+
+    a, b = st.columns(2)
+    with a:
+        st.markdown("### Longest observed spans")
+        long_lived = life.sort_values(["active_days", "observed_days"], ascending=False).head(10)
+        ledger = long_lived[["song", "artist", "active_days", "observed_days", "best_position", "mean_popularity"]].copy()
+        ledger["mean_popularity"] = ledger["mean_popularity"].round(1)
+        st.dataframe(ledger, width="stretch", hide_index=True, alt="Titles with the longest observed chart span.")
+    with b:
+        st.markdown("### Latest chart roster")
+        roster = latest.sort_values("position").merge(
+            life[["song_key", "active_days", "observed_days", "first_seen"]], on="song_key", how="left"
+        )
+        roster_view = roster[["position", "song", "artist", "popularity", "active_days", "observed_days"]].head(12)
+        st.dataframe(roster_view, width="stretch", hide_index=True, alt="Top positions in the latest selected chart snapshot.")
+
+elif page == "Song Trajectories":
+    st.markdown("### Select a title · observed chart path")
+    catalog = filtered[["song_key", "song", "artist"]].drop_duplicates().sort_values(["song", "artist"])
+    labels = catalog.set_index("song_key").apply(lambda row: f"{row['song']} — {row['artist']}", axis=1).to_dict()
+    selected_key = st.selectbox("Song and artist", catalog["song_key"].tolist(), format_func=lambda key: labels[key])
+    track_rows = filtered[filtered["song_key"].eq(selected_key)].sort_values("date")
+    track_info = life[life["song_key"].eq(selected_key)].iloc[0]
+    metric_cards([
+        ("First observed", f"{track_info['first_seen']:%d %b %Y}", "In selected date window", CYAN),
+        ("Observed entries", f"{int(track_info['observed_days']):,}", "Distinct chart dates", ROSE),
+        ("Observed span", f"{int(track_info['active_days']):,} d", "First to last appearance", AMBER),
+        ("Best position", f"#{int(track_info['best_position'])}", "Source chart rank", CYAN),
+        ("Mean popularity", f"{track_info['mean_popularity']:.1f}" if pd.notna(track_info["mean_popularity"]) else "—", "Source popularity field", ROSE),
+        ("Last observed", f"{track_info['last_seen']:%d %b %Y}", "In selected date window", AMBER),
+    ])
+    c1, c2 = st.columns(2)
+    with c1:
+        rank_track = go.Figure(go.Scatter(x=track_rows["date"], y=track_rows["position"], mode="lines+markers",
+                                          line=dict(color=CYAN, width=2), marker=dict(size=4, color=CYAN), name="Position"))
+        rank_track.update_yaxes(autorange="reversed", title="Chart position")
+        rank_track.update_xaxes(title=None)
+        st.markdown("### Rank movement")
+        st.plotly_chart(polish(rank_track, 330), width="stretch", config={"displayModeBar": False}, alt=f"Chart position history for {labels[selected_key]}.")
+    with c2:
+        popularity_track = go.Figure(go.Scatter(x=track_rows["date"], y=track_rows["popularity"], mode="lines+markers",
+                                                line=dict(color=ROSE, width=2), marker=dict(size=4, color=ROSE), name="Popularity"))
+        popularity_track.update_yaxes(title="Source popularity")
+        popularity_track.update_xaxes(title=None)
+        st.markdown("### Popularity history")
+        st.plotly_chart(polish(popularity_track, 330), width="stretch", config={"displayModeBar": False}, alt=f"Recorded popularity history for {labels[selected_key]}.")
+    st.markdown("### Observed entries")
+    detail_columns = ["date", "position", "popularity", "duration_ms", "album_type", "total_tracks", "is_explicit"]
+    st.dataframe(track_rows[detail_columns].rename(columns={"date": "Chart date", "position": "Position", "popularity": "Popularity", "duration_ms": "Duration (ms)", "album_type": "Release type", "total_tracks": "Tracks on release", "is_explicit": "Explicit"}), width="stretch", hide_index=True, alt=f"Daily chart observations for {labels[selected_key]}.")
+
+elif page == "Rotation Dynamics":
+    st.markdown("### Playlist turnover · entries and exits")
+    st.markdown('<p class="section-note">Turnover is new titles divided by the chart size for that snapshot. “Returning” counts a new entry whose song / artist pair appeared earlier in the selected window.</p>', unsafe_allow_html=True)
+    c1, c2 = st.columns([1.6, 1])
+    with c1:
+        flow = go.Figure()
+        flow.add_bar(x=churn["date"], y=churn["entrants"], name="New entries", marker_color=CYAN)
+        flow.add_bar(x=churn["date"], y=-churn["exits"], name="Exits", marker_color=ROSE)
+        flow.update_layout(barmode="relative", yaxis_title="Songs", xaxis_title=None, hovermode="x unified")
+        st.plotly_chart(polish(flow, 360), width="stretch", config={"displayModeBar": False}, alt="Daily entries and exits for distinct song and artist pairs.")
+    with c2:
+        turnover_fig = go.Figure()
+        turnover_fig.add_trace(go.Scatter(x=churn["date"], y=churn["turnover"], mode="lines",
+                                          line=dict(color=AMBER, width=2), fill="tozeroy",
+                                          fillcolor="rgba(245,158,11,.10)", name="Daily turnover"))
+        turnover_fig.add_trace(go.Scatter(x=churn["date"], y=churn["returning"], mode="lines",
+                                          line=dict(color=CYAN, width=1.5, dash="dot"), yaxis="y2", name="Returning titles"))
+        turnover_fig.update_layout(yaxis={"title": "Entrants / chart size", "tickformat": ".0%"},
+                                   yaxis2={"title": "Returning titles", "overlaying": "y", "side": "right", "showgrid": False}, xaxis_title=None)
+        st.plotly_chart(polish(turnover_fig, 360), width="stretch", config={"displayModeBar": False}, alt="Daily entry turnover and returning titles over the selected window.")
+
+    day_order = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    weekday = churn.assign(weekday=churn["date"].dt.day_name()).groupby("weekday").agg(
+        mean_entries=("entrants", "mean"), mean_exits=("exits", "mean"), mean_turnover=("turnover", "mean")
+    ).reindex(day_order).dropna(how="all").reset_index()
+    st.markdown("### Mean rotation by weekday")
+    week_fig = go.Figure()
+    week_fig.add_bar(x=weekday["weekday"], y=weekday["mean_entries"], name="Mean entries", marker_color=CYAN)
+    week_fig.add_bar(x=weekday["weekday"], y=-weekday["mean_exits"], name="Mean exits", marker_color=ROSE)
+    week_fig.update_layout(barmode="relative", yaxis_title="Mean titles per snapshot", xaxis_title=None)
+    st.plotly_chart(polish(week_fig, 300), width="stretch", config={"displayModeBar": False}, alt="Mean chart entries and exits grouped by weekday.")
+    st.markdown("### Recent snapshot transitions")
+    st.dataframe(churn.tail(30).sort_values("date", ascending=False).rename(columns={"date": "Chart date", "chart_size": "Chart size", "entrants": "Entries", "exits": "Exits", "returning": "Returning", "turnover": "Turnover"}).assign(Turnover=lambda frame: frame["Turnover"].map(lambda value: f"{value:.1%}")), width="stretch", hide_index=True, alt="Daily chart transition counts for the latest 30 selected snapshots.")
+
+elif page == "Explicit vs Formats":
+    st.markdown("### Descriptive group comparisons")
+    st.markdown('<p class="section-note">Averages use observed chart rows in the selected window. These are descriptive comparisons and do not imply that content or release format caused a chart outcome.</p>', unsafe_allow_html=True)
+    explicit = compare_groups(filtered, "is_explicit")
+    releases = compare_groups(filtered, "album_type")
+    c1, c2 = st.columns(2)
+    with c1:
+        st.markdown("#### Explicit vs clean")
         if explicit.empty:
-            st.info("No explicit status values are available after filtering.")
+            st.info("No explicit status values are available for this selection.")
         else:
-            fig = px.bar(explicit, x="is_explicit", y="avg_popularity", color="is_explicit", color_discrete_map={"Clean": BLUE, "Explicit": GOLD},
-                         text_auto=".1f", labels={"is_explicit": "Content", "avg_popularity": "Average popularity"})
-            fig.update_layout(showlegend=False)
-            st.plotly_chart(polish(fig, 300), width="stretch", config={"displayModeBar": False})
-            st.dataframe(explicit.round(2), width="stretch", hide_index=True)
-    with right:
-        st.markdown("#### Single vs. album")
-        releases = compare_groups(filtered, "album_type")
+            exp_fig = px.bar(explicit, x="is_explicit", y="avg_popularity", color="is_explicit",
+                             color_discrete_map={"Clean": CYAN, "Explicit": ROSE}, text_auto=".1f",
+                             labels={"is_explicit": "Content label", "avg_popularity": "Mean popularity"})
+            exp_fig.update_layout(showlegend=False)
+            st.plotly_chart(polish(exp_fig, 300), width="stretch", config={"displayModeBar": False}, alt="Mean popularity by explicit content status.")
+            st.dataframe(explicit.round(2), width="stretch", hide_index=True, alt="Summary metrics for clean and explicit chart rows.")
+    with c2:
+        st.markdown("#### Singles vs albums")
         if releases.empty:
-            st.info("No release type values are available after filtering.")
+            st.info("No release type values are available for this selection.")
         else:
-            fig = px.bar(releases, x="album_type", y="avg_position", color="album_type", color_discrete_sequence=[GOLD, BLUE, NAVY],
-                         text_auto=".1f", labels={"album_type": "Release type", "avg_position": "Average chart position"})
-            fig.update_yaxes(autorange="reversed")
-            fig.update_layout(showlegend=False)
-            st.plotly_chart(polish(fig, 300), width="stretch", config={"displayModeBar": False})
-            st.dataframe(releases.round(2), width="stretch", hide_index=True)
-    st.caption("Popularity, position, duration, and track-count comparisons use the source dataset's recorded values. Unknown values are excluded only from the relevant comparison.")
+            rel_fig = px.bar(releases, x="album_type", y="avg_position", color="album_type",
+                             color_discrete_sequence=[AMBER, CYAN, ROSE], text_auto=".1f",
+                             labels={"album_type": "Release type", "avg_position": "Mean chart position"})
+            rel_fig.update_yaxes(autorange="reversed")
+            rel_fig.update_layout(showlegend=False)
+            st.plotly_chart(polish(rel_fig, 300), width="stretch", config={"displayModeBar": False}, alt="Mean chart position by release type; lower positions rank higher.")
+            st.dataframe(releases.round(2), width="stretch", hide_index=True, alt="Summary metrics by observed release type.")
+
+    duration = filtered.groupby("song_key", as_index=False).agg(duration_ms=("duration_ms", "median"))
+    scatter_data = life.merge(duration, on="song_key", how="left")
+    scatter_data["duration_min"] = scatter_data["duration_ms"] / 60000
+    st.markdown("### Track duration and observed chart span")
+    scatter = px.scatter(scatter_data.dropna(subset=["duration_min", "active_days"]), x="duration_min", y="active_days",
+                         color="album_type", color_discrete_sequence=[AMBER, CYAN, ROSE],
+                         hover_data=["song", "artist", "observed_days", "best_position"],
+                         labels={"duration_min": "Track duration (minutes)", "active_days": "Observed lifecycle span (days)", "album_type": "Release type"})
+    st.plotly_chart(polish(scatter, 400), width="stretch", config={"displayModeBar": False}, alt="Track duration compared with observed lifecycle span for each title.")
+    st.caption("Popularity, position, duration, and track-count comparisons use the recorded source values. Rows missing a compared value are omitted from that metric.")
+
+else:
+    st.markdown("### Latest chart snapshot · track ledger")
+    st.markdown('<p class="section-note">Songs are ordered by their recorded chart position on the latest available date in the selected window. Lifecycle fields summarize appearances inside that same window.</p>', unsafe_allow_html=True)
+    search = st.text_input("Find song or artist", placeholder="Type a title or artist name")
+    roster = latest.sort_values("position").merge(
+        life[["song_key", "first_seen", "last_seen", "active_days", "observed_days", "best_position", "mean_popularity"]],
+        on="song_key", how="left",
+    )
+    if search.strip():
+        query = search.strip()
+        roster = roster[roster["song"].str.contains(query, case=False, regex=False) | roster["artist"].str.contains(query, case=False, regex=False)]
+    columns = ["position", "song", "artist", "popularity", "album_type", "is_explicit", "duration_ms", "total_tracks", "first_seen", "active_days", "observed_days", "best_position"]
+    names = {"position": "Rank", "song": "Song", "artist": "Artist", "popularity": "Popularity", "album_type": "Release type", "is_explicit": "Explicit", "duration_ms": "Duration (ms)", "total_tracks": "Release tracks", "first_seen": "First seen", "active_days": "Span (days)", "observed_days": "Chart dates", "best_position": "Best rank"}
+    st.dataframe(roster[columns].rename(columns=names), width="stretch", hide_index=True, alt="Latest observed chart roster with positions and lifecycle measures.")
 
 st.divider()
-st.caption("Spain Top 50 · descriptive analysis from the selected source data · no inferred or fabricated findings")
+st.caption("Spain Top 50 · descriptive analytics from the selected source data · lifecycle stage bands are defined above")
