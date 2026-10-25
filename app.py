@@ -14,16 +14,16 @@ from src.data_cleaning import load_data
 from src.lifecycle import song_lifecycle, playlist_churn, retention_curve
 from src.metrics import overview_metrics, compare_groups, daily_chart_summary
 
-BG = "#0B0F17"
-SURFACE = "#131B2E"
-SURFACE_HIGH = "#1E293B"
-TEXT = "#DFE2EE"
-MUTED = "#94A3B8"
-ROSE = "#E11D48"
-AMBER = "#F59E0B"
-CYAN = "#06B6D4"
-MINT = "#10B981"
-SLATE = "#64748B"
+BG = "#080808"
+SURFACE = "#111111"
+SURFACE_HIGH = "#1A1A1A"
+TEXT = "#F2F2F2"
+MUTED = "#A1A1AA"
+ROSE = "#A1A1AA"
+AMBER = "#D4D4D4"
+CYAN = "#FFFFFF"
+MINT = "#BFBFBF"
+SLATE = "#737373"
 
 st.set_page_config(page_title="Spain Top 50 · Sonic Intelligence", page_icon="◈", layout="wide", initial_sidebar_state="expanded")
 st.markdown(f"""
@@ -32,32 +32,36 @@ st.markdown(f"""
 :root {{ color-scheme:dark; --bg:{BG}; --surface:{SURFACE}; --surface-high:{SURFACE_HIGH}; --text:{TEXT}; --muted:{MUTED}; --rose:{ROSE}; --amber:{AMBER}; --cyan:{CYAN}; }}
 .stApp {{ background:var(--bg); color:var(--text); font-family:'Plus Jakarta Sans',sans-serif; }}
 [data-testid="stAppViewContainer"], [data-testid="stHeader"] {{ background:var(--bg); }}
-[data-testid="stSidebar"] {{ background:#0A0E16; border-right:1px solid rgba(148,163,184,.13); }}
-[data-testid="stSidebar"] * {{ color:var(--text); }}
+[data-testid="stSidebar"] {{ background:#050505; border-right:1px solid rgba(255,255,255,.12); }}
 h1,h2,h3,h4 {{ font-family:'Plus Jakarta Sans',sans-serif!important; color:var(--text)!important; letter-spacing:-.025em; }}
 h1 {{ font-weight:800!important; font-size:clamp(1.7rem,3vw,2.5rem)!important; line-height:1.12!important; }}
-[data-testid="stMetric"] {{ background:linear-gradient(145deg,#1E293B,#131B2E); border:1px solid rgba(148,163,184,.12); border-radius:9px; padding:17px 18px; box-shadow:0 8px 22px rgba(0,0,0,.16); min-height:120px; }}
-[data-testid="stMetricLabel"] {{ color:#94A3B8!important; font-family:'JetBrains Mono',monospace; font-size:.69rem!important; letter-spacing:.08em; text-transform:uppercase; }}
+[data-testid="stMetric"] {{ background:linear-gradient(145deg,#1B1B1B,#101010); border:1px solid rgba(255,255,255,.12); border-radius:8px; padding:17px 18px; box-shadow:0 8px 22px rgba(0,0,0,.24); min-height:120px; }}
+[data-testid="stMetricLabel"] {{ color:#A1A1AA!important; font-family:'JetBrains Mono',monospace; font-size:.69rem!important; letter-spacing:.08em; text-transform:uppercase; }}
 [data-testid="stMetricValue"] {{ color:var(--text)!important; font-family:'JetBrains Mono',monospace; font-weight:700; }}
-[data-testid="stPlotlyChart"], [data-testid="stDataFrame"] {{ background:#131B2E; border:1px solid rgba(148,163,184,.12); border-radius:9px; padding:5px; box-shadow:0 8px 22px rgba(0,0,0,.12); }}
-.eyebrow {{ color:#F59E0B; font-family:'JetBrains Mono',monospace; font-weight:600; letter-spacing:.15em; font-size:.68rem; text-transform:uppercase; }}
-.subtitle {{ color:#94A3B8; margin-top:-.55rem; font-size:.95rem; }}
-.section-note {{ color:#94A3B8; font-size:.82rem; margin-top:-.55rem; }}
-.status-strip {{ background:linear-gradient(110deg,#131B2E,#1E293B); border:1px solid rgba(148,163,184,.13); border-radius:9px; padding:14px 18px; margin:14px 0 20px; }}
-.tag {{ display:inline-block; font:500 .64rem 'JetBrains Mono',monospace; letter-spacing:.08em; text-transform:uppercase; color:#67E8F9; background:rgba(6,182,212,.12); padding:4px 7px; border-radius:3px; }}
-.sidebar-kicker {{ color:#AC8889; font:500 .62rem 'JetBrains Mono',monospace; letter-spacing:.15em; }}
+[data-testid="stPlotlyChart"], [data-testid="stDataFrame"] {{ background:#111111; border:1px solid rgba(255,255,255,.12); border-radius:8px; padding:5px; box-shadow:0 8px 22px rgba(0,0,0,.2); }}
+.eyebrow {{ color:#D4D4D4; font-family:'JetBrains Mono',monospace; font-weight:600; letter-spacing:.15em; font-size:.68rem; text-transform:uppercase; }}
+.subtitle {{ color:#A1A1AA; margin-top:-.55rem; font-size:.95rem; }}
+.section-note {{ color:#A1A1AA; font-size:.82rem; margin-top:-.55rem; }}
+.status-strip {{ background:linear-gradient(110deg,#111111,#1A1A1A); border:1px solid rgba(255,255,255,.13); border-radius:8px; padding:14px 18px; margin:14px 0 20px; }}
+.tag {{ display:inline-block; font:500 .64rem 'JetBrains Mono',monospace; letter-spacing:.08em; text-transform:uppercase; color:#F2F2F2; background:rgba(255,255,255,.10); padding:4px 7px; border-radius:3px; }}
+.sidebar-kicker {{ color:#A1A1AA; font:500 .62rem 'JetBrains Mono',monospace; letter-spacing:.15em; }}
 div[data-testid="stRadio"] label p {{ font-size:.82rem; }}
 div[data-testid="stTabs"] button {{ font-weight:600; }}
+[data-baseweb="popover"] {{ background-color:#171717!important; border:1px solid #404040!important; }}
+[data-baseweb="popover"] *, [data-baseweb="menu"] *, [role="listbox"] *, [role="option"] {{ color:#F2F2F2!important; }}
+[role="listbox"], [data-baseweb="menu"] {{ background-color:#171717!important; }}
+[role="option"] {{ background-color:#171717!important; }}
+[role="option"]:hover, [role="option"][aria-selected="true"] {{ background-color:#333333!important; color:#FFFFFF!important; }}
 </style>
 """, unsafe_allow_html=True)
 
 
 def polish(fig, height=350):
     fig.update_layout(height=height, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor=SURFACE, font=dict(family="Plus Jakarta Sans", color=TEXT, size=11),
-                      margin=dict(l=18, r=18, t=34, b=18), hoverlabel=dict(bgcolor="#0A0E16", font_color=TEXT),
+                      margin=dict(l=18, r=18, t=34, b=18), hoverlabel=dict(bgcolor="#050505", font_color=TEXT),
                       legend=dict(orientation="h", y=1.12, x=0, title=None, font=dict(family="JetBrains Mono", size=9, color=MUTED)))
-    fig.update_xaxes(showgrid=False, linecolor="rgba(148,163,184,.16)", zeroline=False, tickfont=dict(family="JetBrains Mono", size=9, color=MUTED))
-    fig.update_yaxes(gridcolor="rgba(148,163,184,.12)", zeroline=False, tickfont=dict(family="JetBrains Mono", size=9, color=MUTED))
+    fig.update_xaxes(showgrid=False, linecolor="rgba(255,255,255,.14)", zeroline=False, tickfont=dict(family="JetBrains Mono", size=9, color=MUTED))
+    fig.update_yaxes(gridcolor="rgba(255,255,255,.10)", zeroline=False, tickfont=dict(family="JetBrains Mono", size=9, color=MUTED))
     return fig
 
 
@@ -148,7 +152,7 @@ if page == "Lifecycle Radar":
     )
     stages = current_life.groupby("stage", observed=False).size().reindex(stage_order, fill_value=0).rename("titles").reset_index()
     stages["share"] = stages["titles"] / max(stages["titles"].sum(), 1)
-    stage_colors = {"New": "#8B5CF6", "Developing": MINT, "Established": ROSE, "Long-running": AMBER}
+    stage_colors = {"New": "#737373", "Developing": "#A1A1AA", "Established": "#D4D4D4", "Long-running": "#FFFFFF"}
     c1, c2 = st.columns([1, 1.5])
     with c1:
         stage_fig = px.bar(stages, x="titles", y="stage", orientation="h", text="titles",
@@ -160,7 +164,7 @@ if page == "Lifecycle Radar":
         daily = daily_chart_summary(filtered)
         rank_fig = go.Figure(go.Scatter(x=daily["date"], y=daily["avg_position"], mode="lines",
                                         line=dict(color=CYAN, width=2.5), fill="tozeroy",
-                                        fillcolor="rgba(6,182,212,.10)", name="Mean position"))
+                                        fillcolor="rgba(255,255,255,.10)", name="Mean position"))
         rank_fig.update_yaxes(autorange="reversed", title="Mean chart position")
         rank_fig.update_xaxes(title=None)
         st.plotly_chart(polish(rank_fig, 285), width="stretch", config={"displayModeBar": False}, alt="Mean Spain Top 50 chart position over the selected date range.")
@@ -237,7 +241,7 @@ elif page == "Rotation Dynamics":
         turnover_fig = go.Figure()
         turnover_fig.add_trace(go.Scatter(x=churn["date"], y=churn["turnover"], mode="lines",
                                           line=dict(color=AMBER, width=2), fill="tozeroy",
-                                          fillcolor="rgba(245,158,11,.10)", name="Daily turnover"))
+                                          fillcolor="rgba(255,255,255,.10)", name="Daily turnover"))
         turnover_fig.add_trace(go.Scatter(x=churn["date"], y=churn["returning"], mode="lines",
                                           line=dict(color=CYAN, width=1.5, dash="dot"), yaxis="y2", name="Returning titles"))
         turnover_fig.update_layout(yaxis={"title": "Entrants / chart size", "tickformat": ".0%"},

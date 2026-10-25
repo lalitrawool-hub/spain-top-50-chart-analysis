@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-container":"#007f95","on-surface-variant":"#e5bdbe","background":"#0f131c","on-primary-container":"#fffaf9","surface-dim":"#0f131c","inverse-primary":"#be0037","outline":"#ac8889","inverse-surface":"#dfe2ee","surface-container-highest":"#31353e","primary-fixed-dim":"#ffb3b6","inverse-on-surface":"#2c3039","on-tertiary-fixed":"#001f26","on-tertiary":"#003640","on-primary-fixed":"#40000c","on-primary":"#68001a","tertiary":"#4cd7f6","surface":"#0f131c","on-error":"#690005","surface-container-high":"#262a33","surface-container-low":"#181c24","tertiary-fixed-dim":"#4cd7f6","secondary-container":"#ee9800","error":"#ffb4ab","primary-fixed":"#ffdada","on-secondary-container":"#5b3800","surface-container-lowest":"#0a0e16","on-tertiary-container":"#f5fcff","primary-container":"#e11d48","on-secondary-fixed":"#2a1700","secondary":"#ffb95f","error-container":"#93000a","on-primary-fixed-variant":"#920028","surface-container":"#1c2028","surface-bright":"#353942","on-error-container":"#ffdad6","on-surface":"#dfe2ee","on-background":"#dfe2ee","surface-tint":"#ffb3b6","secondary-fixed":"#ffddb8","surface-variant":"#31353e","primary":"#ffb3b6","tertiary-fixed":"#acedff","secondary-fixed-dim":"#ffb95f","on-secondary":"#472a00","outline-variant":"#5c3f40","on-tertiary-fixed-variant":"#004e5c","on-secondary-fixed-variant":"#653e00"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{margin:"2rem","margin-mobile":"1rem","space-sm":"0.5rem","space-lg":"1.5rem",gutter:"1rem","space-md":"1rem","gutter-mobile":"0.75rem","space-xl":"2.5rem","space-xs":"0.25rem"},fontFamily:{"label-sm":["JetBrains Mono"],"metric-display":["JetBrains Mono"],"headline-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-md":["JetBrains Mono"],"headline-xl":["Plus Jakarta Sans"]},fontSize:{"label-sm":["10px",{lineHeight:"14px",fontWeight:"500"}],"metric-display":["28px",{lineHeight:"32px",fontWeight:"700"}],"headline-md":["18px",{lineHeight:"24px",fontWeight:"600"}],"body-md":["13px",{lineHeight:"18px",fontWeight:"400"}],"headline-lg":["24px",{lineHeight:"32px",fontWeight:"700"}],"headline-sm":["15px",{lineHeight:"20px",fontWeight:"600"}],"body-lg":["14px",{lineHeight:"20px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"500"}],"headline-xl":["32px",{lineHeight:"40px",fontWeight:"800"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest/90 backdrop-blur-2xl z-50 flex flex-col justify-between border-r border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-outline-variant/20 bg-surface-container-lowest/60"><div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(255,179,182,0.8)]"></div><span class="font-label-sm text-label-sm text-outline tracking-widest uppercase">WARNER MUSIC GROUP // INTEL</span></div><div class="px-space-md py-space-lg"><div class="px-space-sm mb-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline">Intelligence Modules</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="group flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="lifecycle-radar" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">radar</span><span class="font-headline-sm text-headline-sm tracking-tight">Lifecycle Radar</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface">01</span></a><a aria-current="page" class="group flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all bg-primary-container text-on-primary-container font-headline-sm" data-path="song-trajectories" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">show_chart</span><span class="font-headline-sm text-headline-sm tracking-tight">Song Trajectories</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface">02</span></a><a class="group flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="rotation-dynamics" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">published_with_changes</span><span class="font-headline-sm text-headline-sm tracking-tight">Rotation Dynamics</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface">03</span></a><a class="group flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="explicit-vs-clean-and-formats" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">graphic_eq</span><span class="font-headline-sm text-headline-sm tracking-tight">Explicit vs Formats</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface">04</span></a><a class="group flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ar-playbook" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">auto_stories</span><span class="font-headline-sm text-headline-sm tracking-tight">A&amp;R Playbook</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface">05</span></a></nav></div></div><div class="p-space-md m-space-md rounded-xl bg-surface-container-low/70 border border-outline-variant/30 backdrop-blur-md"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">DSP Ingest Terminal</span><span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span></div><div class="font-label-md text-label-md text-on-surface flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary text-sm">sync</span><span>PROMETHEUS V4.8</span></div><div class="mt-space-xs font-label-sm text-label-sm text-outline-variant">Madrid Node · Latency 14ms</div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-28 bg-surface/90 backdrop-blur-xl z-40 border-b border-outline-variant/20 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-lg flex items-center justify-between border-b border-outline-variant/15"><div class="flex items-center gap-space-md"><img alt="Atlantic Iberian Sonic Intelligence Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VkVDnl7F2GLbZtqNiLyrJZkzQJ10EOwcl8WhixSl73XuExkjKJ7HkcVxjhaTu0lUALuZx78vnhEs1PV-M0D3DcjyG8IupHLyyASOeefQPssvrh4UFlMBJHRzq1G8x5dr3TX5sPwGRaV9hegakIGEz0kBhmMhReGwH46oig8LVmAx0jU9ZUTVUkoYDSJooPnj7zAcOO3JrPlPdlbs-Fd87kDxmWcVcgYBPBk2GFbrccWX1l0CVWY-eNjVM"/><div class="flex items-center gap-space-sm"><span class="px-space-xs py-0.5 bg-surface-container-highest border border-outline-variant/40 rounded text-on-surface font-label-sm text-label-sm uppercase tracking-wider">ATLANTIC RECORDS</span><span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">SONIC IBERIA</span><span class="font-label-md text-label-md text-outline">// Lifecycle Intelligence</span></div></div><div class="flex items-center gap-space-lg"><div class="hidden xl:flex items-center gap-space-md px-space-md py-1 rounded bg-surface-container-low border border-outline-variant/20"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">SPAIN TOP 50 DAILY</span></div><span class="text-outline font-label-sm">·</span><span class="font-label-sm text-label-sm text-outline">MADRID HQ</span><span class="text-outline font-label-sm">·</span><span class="font-label-sm text-label-sm text-tertiary">50 ENTRIES/DAY SYNCED</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/20 font-label-sm text-label-sm text-on-surface"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>API STATUS: SYNCHRONIZED</span></div><button class="flex items-center gap-space-xs bg-primary-container text-on-primary-container px-space-md py-1.5 rounded font-label-md text-label-md uppercase tracking-wider hover:bg-inverse-primary hover:text-on-primary transition-all shadow-[0_0_12px_rgba(225,29,72,0.35)]" type="button"><span class="material-symbols-outlined text-sm">download</span><span>Generate Executive Brief</span></button><div class="flex items-center gap-space-md pl-space-sm border-l border-outline-variant/30"><div class="relative flex items-center justify-center p-1 rounded-full text-on-surface-variant hover:text-on-surface cursor-pointer"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-primary-container rounded-full ring-2 ring-surface"></span></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLfM8P5Rb7FRVbYqBO2CQ7dhHy5N0_OaPAxqzCDoKItJG9zjQZcTPOiy2zZOBFvjAGxcb2-UJXQ-TfLs3Dio2BqonpuAxZJYGQIqSaSCynJ7H_bLHCA1IetlJwa1NDc2UiX-ASDrQC-GCFjHGvtJ1TbWiUb_zAu79zU82rMMuu6VnkrZOWM7DDYRp-tLnm7CtxI6dTB1fq9KtQemp0GCCDI4WD_yirZMMQueQqSJCpE5yT0LTBpaqM"/><div class="flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-none">Elena Vargas</span><span class="font-label-sm text-label-sm text-outline mt-0.5 leading-none">Head of A&amp;R Strategy</span></div></div></div></div></div><div class="h-12 px-space-lg flex items-center justify-between bg-surface-container-lowest/50 text-on-surface-variant"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container border border-outline-variant/25 text-on-surface font-label-sm text-label-sm cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-tertiary text-sm">calendar_today</span><span>Last 90 Days (Oct 1 - Dec 31)</span><span class="material-symbols-outlined text-outline text-sm">expand_more</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container border border-outline-variant/25 text-on-surface font-label-sm text-label-sm cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-secondary text-sm">filter_alt</span><span>All Stages</span><span class="material-symbols-outlined text-outline text-sm">expand_more</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container border border-outline-variant/25 text-on-surface font-label-sm text-label-sm cursor-pointer hover:border-outline transition-colors"><span class="px-1 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold">E</span><span>Explicit: All [E]</span><span class="material-symbols-outlined text-outline text-sm">expand_more</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container border border-outline-variant/25 text-on-surface font-label-sm text-label-sm cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-outline text-sm">album</span><span>Singles &amp; Albums</span><span class="material-symbols-outlined text-outline text-sm">expand_more</span></div></div><div class="flex items-center"><div class="relative flex items-center w-64"><span class="material-symbols-outlined absolute left-space-sm text-outline text-sm">search</span><input class="w-full bg-surface-container-high/60 border border-outline-variant/30 rounded pl-8 pr-space-sm py-1 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-tertiary focus:ring-1 focus:ring-tertiary transition-all" placeholder="Filter song or artist..." type="text"/></div></div></div></header><main class="relative pt-28 bg-surface flex-1 w-full px-space-margin"><div class="flex flex-col w-full pb-16">
+<!-- Top Telemetry Row & Archetype Selector Header -->
+<div class="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-lg mb-space-lg pt-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase tracking-wider font-semibold">Decay Engine V3.2</span>
+<span class="text-outline font-label-sm text-label-sm">// TIME-SERIES TRAJECTORY ANALYSIS</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Song Trajectories &amp; Survival Curves</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Predictive chart decay telemetry mapped against 1,240 Spain Top 50 historical lifecycles. Real-time regression curves for velocity, algorithmic retention, and catalog resilience.
+      </p>
+</div>
+<!-- Quick Stats Pills -->
+<div class="flex flex-wrap items-center gap-space-md bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex flex-col px-space-md py-space-xs border-r border-outline-variant/20">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Median Peak Velocity</span>
+<span class="font-metric-display text-metric-display text-tertiary">9.4 <span class="font-label-md text-label-md text-outline">Days</span></span>
+</div>
+<div class="flex flex-col px-space-md py-space-xs border-r border-outline-variant/20">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Survival Rate (&gt;45d)</span>
+<span class="font-metric-display text-metric-display text-secondary">31.8%</span>
+</div>
+<div class="flex flex-col px-space-md py-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Iberian Velocity Index</span>
+<span class="font-metric-display text-metric-display text-primary">88.4 <span class="font-label-sm text-label-sm text-tertiary font-normal">▲ 4.2%</span></span>
+</div>
+</div>
+</div>
+<!-- SECTION 1: Interactive Multi-Track Trajectory Chart (12-Col Grid) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Chart Main Panel (8 Cols) -->
+<div class="xl:col-span-8 flex flex-col bg-surface-container-low rounded-xl p-space-lg relative overflow-hidden shadow-xl">
+<!-- Glow ambient backdrops -->
+<div class="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-tertiary-container/15 blur-3xl pointer-events-none"></div>
+<!-- Panel Title + Interactive Archetype Filters -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md pb-space-md mb-space-md border-b border-outline-variant/20">
+<div class="flex items-center gap-space-sm">
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></div>
+<span class="font-headline-sm text-headline-sm text-on-surface">5 Archetype Trajectory Curves (Rank 1 - 50 vs Chart Days)</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-high/70 p-1 rounded font-label-sm text-label-sm">
+<span class="text-outline px-space-xs">ZOOM:</span>
+<button class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface">30D</button>
+<button class="px-space-xs py-0.5 rounded text-outline hover:text-on-surface">90D</button>
+<button class="px-space-xs py-0.5 rounded text-outline hover:text-on-surface">180D</button>
+</div>
+</div>
+<!-- Archetype Toggle Buttons -->
+<div class="flex flex-wrap gap-space-xs mb-space-md" id="archetype-buttons">
+<button class="archetype-btn active flex items-center gap-space-xs px-space-sm py-1 rounded font-label-sm text-label-sm transition-all bg-primary-container text-on-primary-container shadow-md" data-curve="flash">
+<span class="w-2 h-2 rounded-full bg-on-primary-container"></span>
+<span>Flash Viral Peak (TikTok Drop)</span>
+</button>
+<button class="archetype-btn flex items-center gap-space-xs px-space-sm py-1 rounded font-label-sm text-label-sm transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-curve="anthem">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Sustained Iberian Anthem</span>
+</button>
+<button class="archetype-btn flex items-center gap-space-xs px-space-sm py-1 rounded font-label-sm text-label-sm transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-curve="slowburn">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Slow Burn Regional Hit</span>
+</button>
+<button class="archetype-btn flex items-center gap-space-xs px-space-sm py-1 rounded font-label-sm text-label-sm transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-curve="album">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span>Album Drop Cluster</span>
+</button>
+<button class="archetype-btn flex items-center gap-space-xs px-space-sm py-1 rounded font-label-sm text-label-sm transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-curve="radio">
+<span class="w-2 h-2 rounded-full bg-on-surface-variant"></span>
+<span>Clean Radio Crossover</span>
+</button>
+</div>
+<!-- SVG Chart Canvas Area -->
+<div class="relative w-full h-80 flex items-center justify-center">
+<!-- Live Tooltip Element -->
+<div class="absolute hidden z-30 pointer-events-none bg-surface-container-lowest/95 backdrop-blur-md p-space-sm rounded-lg shadow-2xl transition-all duration-75 text-on-surface min-w-[210px] border border-outline-variant/30" id="chart-tooltip">
+<div class="flex items-center justify-between mb-1 pb-1 border-b border-outline-variant/30">
+<span class="font-headline-sm text-body-sm font-bold text-primary" id="tt-title">Flash Viral Peak</span>
+<span class="font-label-sm text-label-sm text-tertiary" id="tt-day">Day 4</span>
+</div>
+<div class="grid grid-cols-2 gap-x-2 gap-y-1 font-label-sm text-label-sm">
+<span class="text-outline">Top 50 Rank:</span>
+<span class="text-on-surface font-bold text-right" id="tt-rank">#1</span>
+<span class="text-outline">Decay Rate:</span>
+<span class="text-error font-mono text-right" id="tt-decay">-18.4% / wk</span>
+<span class="text-outline">Algo Retention:</span>
+<span class="text-secondary font-mono text-right" id="tt-retention">92 pts</span>
+<span class="text-outline">DSP Streams:</span>
+<span class="text-on-surface font-mono text-right" id="tt-streams">4.82M/d</span>
+</div>
+</div>
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 760 300">
+<defs>
+<lineargradient id="gradPrimary" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#e11d48" stop-opacity="0.45"></stop>
+<stop offset="100%" stop-color="#e11d48" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="gradTertiary" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4cd7f6" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="gradSecondary" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#ffb95f" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#ffb95f" stop-opacity="0.0"></stop>
+</lineargradient>
+<filter height="140%" id="neonGlow" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="3"></fegaussianblur>
+<femerge>
+<femergenode in="blur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<!-- Horizontal Grid Lines (Ranks 1, 10, 20, 30, 40, 50) -->
+<!-- Inverted: Rank 1 is near top (y=20), Rank 50 is near bottom (y=270) -->
+<g class="text-outline-variant/40">
+<line stroke="currentColor" stroke-dasharray="2 3" stroke-width="1" x1="50" x2="740" y1="20" y2="20"></line>
+<line stroke="currentColor" stroke-dasharray="2 3" stroke-width="1" x1="50" x2="740" y1="70" y2="70"></line>
+<line stroke="currentColor" stroke-dasharray="2 3" stroke-width="1" x1="50" x2="740" y1="120" y2="120"></line>
+<line stroke="currentColor" stroke-dasharray="2 3" stroke-width="1" x1="50" x2="740" y1="170" y2="170"></line>
+<line stroke="currentColor" stroke-dasharray="2 3" stroke-width="1" x1="50" x2="740" y1="220" y2="220"></line>
+<line stroke="currentColor" stroke-dasharray="2 3" stroke-width="1" x1="50" x2="740" y1="270" y2="270"></line>
+</g>
+<!-- Y-Axis Labels (Rank) -->
+<text fill="#ffb3b6" font-family="JetBrains Mono" font-size="10" font-weight="bold" text-anchor="end" x="40" y="24">#1</text>
+<text fill="#ac8889" font-family="JetBrains Mono" font-size="9" text-anchor="end" x="40" y="74">#10</text>
+<text fill="#ac8889" font-family="JetBrains Mono" font-size="9" text-anchor="end" x="40" y="124">#20</text>
+<text fill="#ac8889" font-family="JetBrains Mono" font-size="9" text-anchor="end" x="40" y="174">#30</text>
+<text fill="#ac8889" font-family="JetBrains Mono" font-size="9" text-anchor="end" x="40" y="224">#40</text>
+<text fill="#ac8889" font-family="JetBrains Mono" font-size="9" text-anchor="end" x="40" y="274">#50</text>
+<!-- X-Axis Labels (Days on Chart) -->
+<text fill="#ac8889" font-family="JetBrains Mono" font-size="9" x="60" y="295">Day 0</text>
+<text fill="#ac8889" font-family="JetBrains Mono" font-size="9" x="180" y="295">Day 14</text>
+<text fill="#ac8889" font-family="JetBrains Mono" font-size="9" x="310" y="295">Day 30</text>
+<text fill="#ac8889" font-family="JetBrains Mono" font-size="9" x="450" y="295">Day 60</text>
+<text fill="#ac8889" font-family="JetBrains Mono" font-size="9" x="590" y="295">Day 90</text>
+<text fill="#ac8889" font-family="JetBrains Mono" font-size="9" x="710" y="295">Day 120+</text>
+<!-- Drop zone threshold marker (Rank 50 dropoff) -->
+<line opacity="0.4" stroke="#e11d48" stroke-dasharray="4 4" stroke-width="1.5" x1="50" x2="740" y1="270" y2="270"></line>
+<text fill="#e11d48" font-family="JetBrains Mono" font-size="9" opacity="0.8" x="630" y="264">Drop-Off Threshold (#50)</text>
+<!-- CURVE 1: Flash Viral Peak (Primary Crimson) -->
+<!-- Enters #4 (y=38), peaks #1 (y=20) at Day 4, crashes out at day 24 (y=275) -->
+<path class="transition-opacity duration-300" d="M 60,40 Q 85,20 100,20 T 150,140 T 210,275" fill="none" filter="url(#neonGlow)" id="curve-flash" stroke="#e11d48" stroke-width="3"></path>
+<!-- Flash area fill -->
+<path class="transition-opacity duration-300" d="M 60,40 Q 85,20 100,20 T 150,140 T 210,275 L 210,270 L 60,270 Z" fill="url(#gradPrimary)" id="area-flash" opacity="0.6"></path>
+<!-- CURVE 2: Sustained Iberian Anthem (Tertiary Cyan) -->
+<!-- Enters #18 (y=110), climbs to #1 (y=20) at day 21, holds high rank across 120+ days -->
+<path class="transition-opacity duration-300" d="M 60,110 C 120,70 160,20 220,20 C 350,22 450,30 570,45 C 650,55 700,75 740,90" fill="none" filter="url(#neonGlow)" id="curve-anthem" stroke="#4cd7f6" stroke-width="2.5"></path>
+<!-- CURVE 3: Slow Burn Regional Hit (Secondary Amber) -->
+<!-- Enters #48 (y=260), slowly warms up over 45 days, climbs to #12, holds long mature phase -->
+<path class="transition-opacity duration-300" d="M 60,260 C 180,250 280,220 370,160 C 470,95 550,78 640,82 C 690,88 720,110 740,135" fill="none" id="curve-slowburn" stroke="#ffb95f" stroke-dasharray="5 2" stroke-width="2"></path>
+<!-- CURVE 4: Album Drop Cluster Decay (Outline Slate) -->
+<!-- Enters #8 on release day, drops steep within 14 days down to #50 -->
+<path class="transition-opacity duration-300" d="M 60,60 C 90,85 120,170 170,272" fill="none" id="curve-album" stroke="#ac8889" stroke-dasharray="3 3" stroke-width="2"></path>
+<!-- CURVE 5: Clean Radio Crossover (On-Surface-Variant) -->
+<!-- Steady mid-tier retention between rank #22 and #34 -->
+<path class="transition-opacity duration-300" d="M 60,180 C 150,140 260,130 380,135 C 500,140 620,155 740,165" fill="none" id="curve-radio" stroke="#e5bdbe" stroke-linecap="round" stroke-width="2"></path>
+<!-- Interactive Node Hit-Targets on Flash Viral Curve -->
+<circle class="cursor-pointer hover:scale-150 transition-transform" cx="100" cy="20" data-day="Day 4" data-decay="-4.2%" data-rank="#1 Peak" data-streams="5.4M" data-title="Flash Viral Peak" fill="#e11d48" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<circle class="cursor-pointer hover:scale-150 transition-transform" cx="150" cy="140" data-day="Day 14" data-decay="-22.8%" data-rank="#24" data-streams="1.9M" data-title="Flash Viral Peak" fill="#e11d48" r="4"></circle>
+<circle class="cursor-pointer hover:scale-150 transition-transform" cx="210" cy="275" data-day="Day 24" data-decay="-54.0%" data-rank="Exited (#50+)" data-streams="420K" data-title="Flash Viral Peak" fill="#e11d48" r="4"></circle>
+<!-- Anthem Peak Node -->
+<circle class="cursor-pointer hover:scale-150 transition-transform" cx="220" cy="20" data-day="Day 21" data-decay="+0.8%" data-rank="#1 Peak (Anthem)" data-streams="6.8M" data-title="Sustained Anthem" fill="#4cd7f6" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<circle class="cursor-pointer hover:scale-150 transition-transform" cx="570" cy="45" data-day="Day 84" data-decay="-1.1%" data-rank="#5 Stable" data-streams="4.1M" data-title="Sustained Anthem" fill="#4cd7f6" r="4"></circle>
+</svg>
+</div>
+<!-- Trajectory Legend & Algorithmic Trigger Annotations -->
+<div class="grid grid-cols-2 md:grid-cols-5 gap-space-sm pt-space-md border-t border-outline-variant/15 font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-0.5 bg-primary-container"></span>
+<span class="text-on-surface truncate">Flash Viral (24d max)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-0.5 bg-tertiary"></span>
+<span class="text-on-surface truncate">Iberian Anthem (&gt;120d)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-0.5 bg-secondary border-b border-dashed"></span>
+<span class="text-on-surface truncate">Slow Burn (45d mat.)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-0.5 bg-outline border-b border-dotted"></span>
+<span class="text-on-surface truncate">Album Cluster (14d)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-0.5 bg-on-surface-variant"></span>
+<span class="text-on-surface truncate">Radio Crossover (Mid)</span>
+</div>
+</div>
+</div>
+<!-- Inspector Mini-Card: Rapid Decay Warning Alert (4 Cols) -->
+<div class="xl:col-span-4 flex flex-col justify-between bg-surface-container-low rounded-xl p-space-lg shadow-xl relative overflow-hidden">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">warning</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">A&amp;R Decay Anomaly Detected</span>
+</div>
+<span class="px-space-xs py-0.5 bg-error-container text-on-error-container font-label-sm text-label-sm rounded uppercase">CRITICAL</span>
+</div>
+<div class="flex items-center gap-space-md mb-space-md">
+<img class="w-14 h-14 rounded-lg object-cover shadow-md" data-alt="High contrast atmospheric album cover of Madrid urban music artist with neon cyan lighting and dark silhouette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8PtJdq3CeTVoifsmE-nzbnRCILntbMch6Aw_MIHzIBogbEXsosqMTQPBH7vnzgOqbbkjbaW4gKi2lHkzRtrlAMu98xVoH7rVzf--LvIVMLJilbGzk0BCjzviIWdrscXEuxX_ghqS0Wi-TxILFxoCZfAC8N0kKyNPx94RGeUugRF4JtfepdYUUo85KXDExP7UTLLhzlcMwtO5G28AdPtrKLompxQylJn-4wGm_2IQkXfcWxMgAWCZe"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">LUCES DE CHUECA</span>
+<span class="font-body-sm text-body-sm text-outline truncate">Nico B. · Atlantic Spain Discovery</span>
+<span class="font-label-sm text-label-sm text-tertiary mt-0.5">Archetype: Flash Viral (#4 Peak)</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Song velocity plummeted by <span class="text-error font-semibold">-34.2% streams</span> between Day 7 and Day 11. Spotify Editorial rotation shifted from <span class="text-on-surface font-mono">Viva Latino #3</span> to <span class="text-outline font-mono">Hits Urban #28</span>.
+        </p>
+<!-- Projected Shelf Life Gauge -->
+<div class="bg-surface-container-high/60 p-space-sm rounded-lg mb-space-md">
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="text-outline">Calculated Half-Life:</span>
+<span class="text-primary font-bold">4.2 Days Left</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 78%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-outline mt-1">
+<span>Entry: Oct 14</span>
+<span>Est. Exit: Nov 02</span>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="flex items-center gap-space-sm pt-space-sm border-t border-outline-variant/20">
+<button class="flex-1 py-1.5 px-space-sm rounded bg-primary-container text-on-primary-container font-label-md text-label-md uppercase tracking-wider hover:bg-inverse-primary transition-all text-center">
+          Trigger Radio Push
+        </button>
+<button class="py-1.5 px-space-sm rounded bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all">
+          Simulate Remix
+        </button>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Scatter Quadrant Matrix & Deep-Dive Song Lifecycle Inspector -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Quadrant Matrix: Time-to-Peak vs Longevity (7 Cols) -->
+<div class="xl:col-span-7 flex flex-col bg-surface-container-low rounded-xl p-space-lg shadow-xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md pb-space-xs border-b border-outline-variant/20">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Time-to-Peak vs Longevity Matrix</h2>
+<p class="font-body-sm text-body-sm text-outline">Mapping 50 current chart songs across 4 structural persistence quadrants</p>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-outline">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Sample: Spain Top 50 Daily Ingest</span>
+</div>
+</div>
+<!-- Quadrant Visual Box -->
+<div class="relative w-full h-96 bg-surface-container-lowest/80 rounded-lg p-space-md overflow-hidden">
+<!-- Crosshairs separating the 4 quadrants -->
+<div class="absolute inset-x-0 top-1/2 h-[1px] bg-outline-variant/30"></div>
+<div class="absolute inset-y-0 left-1/2 w-[1px] bg-outline-variant/30"></div>
+<!-- Quadrant Labels -->
+<div class="absolute top-2 left-2 p-1.5 rounded bg-surface-container-high/40 backdrop-blur-sm">
+<span class="font-label-sm text-label-sm font-bold text-primary uppercase">Q1: Fast Burn Instant Hits</span>
+<p class="font-label-sm text-label-sm text-outline leading-tight">High Peak (&lt;#10) · Short Shelf Life (&lt;30d)</p>
+</div>
+<div class="absolute top-2 right-2 text-right p-1.5 rounded bg-surface-container-high/40 backdrop-blur-sm">
+<span class="font-label-sm text-label-sm font-bold text-tertiary uppercase">Q2: Legacy Powerhouses</span>
+<p class="font-label-sm text-label-sm text-outline leading-tight">High Peak (#1-#5) · High Longevity (&gt;90d)</p>
+</div>
+<div class="absolute bottom-2 left-2 p-1.5 rounded bg-surface-container-high/40 backdrop-blur-sm">
+<span class="font-label-sm text-label-sm font-bold text-outline uppercase">Q4: Marginal Churn</span>
+<p class="font-label-sm text-label-sm text-outline leading-tight">Low Peak (#35-#50) · Fast Exit (&lt;15d)</p>
+</div>
+<div class="absolute bottom-2 right-2 text-right p-1.5 rounded bg-surface-container-high/40 backdrop-blur-sm">
+<span class="font-label-sm text-label-sm font-bold text-secondary uppercase">Q3: Steady Catalogs</span>
+<p class="font-label-sm text-label-sm text-outline leading-tight">Mid Peak (#15-#35) · Long Duration (&gt;60d)</p>
+</div>
+<!-- Plotted Songs (Scatter Points) -->
+<!-- Q2: Legacy Powerhouses -->
+<div class="absolute top-[28%] right-[18%] group cursor-pointer" data-track="columbia">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-6 h-6 rounded-full bg-tertiary/20 animate-ping"></span>
+<div class="w-3.5 h-3.5 rounded-full bg-tertiary border-2 border-surface shadow-md"></div>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-surface-container-highest px-1.5 py-0.5 rounded font-label-sm text-label-sm text-on-surface shadow opacity-90 group-hover:opacity-100">
+              Quevedo · Columbia (#1)
+            </div>
+</div>
+</div>
+<div class="absolute top-[22%] right-[28%] group cursor-pointer">
+<div class="w-3 h-3 rounded-full bg-tertiary border-2 border-surface"></div>
+<div class="hidden group-hover:block absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-surface-container-highest px-1.5 py-0.5 rounded font-label-sm text-label-sm text-on-surface shadow z-20">
+            Rosalía · Despechá (164d)
+          </div>
+</div>
+<div class="absolute top-[35%] right-[22%] group cursor-pointer">
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary/80"></div>
+<div class="hidden group-hover:block absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-surface-container-highest px-1.5 py-0.5 rounded font-label-sm text-label-sm text-on-surface shadow z-20">
+            Saiko · Supernova (110d)
+          </div>
+</div>
+<!-- Q1: Instant Hits & Fast Burn -->
+<div class="absolute top-[18%] left-[22%] group cursor-pointer">
+<div class="w-3 h-3 rounded-full bg-primary-container border-2 border-surface"></div>
+<div class="hidden group-hover:block absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-surface-container-highest px-1.5 py-0.5 rounded font-label-sm text-label-sm text-on-surface shadow z-20">
+            TikTok Sound · 'Bailoteo' (18d)
+          </div>
+</div>
+<div class="absolute top-[30%] left-[34%] group cursor-pointer">
+<div class="w-2.5 h-2.5 rounded-full bg-primary-container"></div>
+<div class="hidden group-hover:block absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-surface-container-highest px-1.5 py-0.5 rounded font-label-sm text-label-sm text-on-surface shadow z-20">
+            Maikel Delacalle · Single Drop (24d)
+          </div>
+</div>
+<!-- Q3: Steady Catalogs -->
+<div class="absolute bottom-[24%] right-[24%] group cursor-pointer">
+<div class="w-3 h-3 rounded-full bg-secondary border-2 border-surface"></div>
+<div class="hidden group-hover:block absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-surface-container-highest px-1.5 py-0.5 rounded font-label-sm text-label-sm text-on-surface shadow z-20">
+            Dellafuente · Romero Santo (78d)
+          </div>
+</div>
+<div class="absolute bottom-[32%] right-[15%] group cursor-pointer">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary/80"></div>
+<div class="hidden group-hover:block absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-surface-container-highest px-1.5 py-0.5 rounded font-label-sm text-label-sm text-on-surface shadow z-20">
+            C. Tangana · Demasiadas Mujeres (210d)
+          </div>
+</div>
+<!-- Q4: Marginal Churn (Clustered Bottom-Left) -->
+<div class="absolute bottom-[18%] left-[18%] w-2 h-2 rounded-full bg-outline/60"></div>
+<div class="absolute bottom-[14%] left-[24%] w-2 h-2 rounded-full bg-outline/60"></div>
+<div class="absolute bottom-[22%] left-[12%] w-2 h-2 rounded-full bg-outline/60"></div>
+<div class="absolute bottom-[28%] left-[28%] w-2 h-2 rounded-full bg-outline/60"></div>
+<div class="absolute bottom-[10%] left-[32%] w-2 h-2 rounded-full bg-outline/60"></div>
+</div>
+<!-- Quadrant Summary Footnote -->
+<div class="flex items-center justify-between pt-space-sm font-label-sm text-label-sm text-outline">
+<span>X-Axis: Longevity (0 to 180 Days)</span>
+<span>Y-Axis: Inverted Peak Position (#50 to #1)</span>
+</div>
+</div>
+<!-- Deep-Dive Song Lifecycle Inspector Drawer/Panel (5 Cols) -->
+<div class="xl:col-span-5 flex flex-col bg-surface-container rounded-xl p-space-lg shadow-2xl relative border-t-2 border-tertiary">
+<!-- Track Header -->
+<div class="flex items-start justify-between mb-space-md">
+<div class="flex items-center gap-space-md">
+<img class="w-20 h-20 rounded-xl object-cover shadow-xl" data-alt="Album cover artwork for hit urban record Columbia by Quevedo with moody blue twilight lighting and Atlantic Records typography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEZ9dGJY57c5WwekZdU5EDreOhgT41Q_E812hdxyj59L_1x2RQW_DRhUqfMbBILnVm1ReMz5Z-4udCWP2uiqHhsltEIcpj_xi3XfKqG1Fr_6pNTJfc3HFUnggQt-JqxUpkVEztQwPdnI9_B_J0CSKI8kicEfzbSERuNBbU2dWCXW8tdaf7FPf0CxyE4Hb_ye5aJQvP1Yp37aoq2_xr-3IKkNvT1BCmjMB1PsWd_a8E2MvsFFSvDsUD"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold">LEGACY ANTHEM</span>
+<span class="px-1 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold">[E] EXPLICIT</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">Columbia</h3>
+<span class="font-body-md text-body-md text-tertiary font-semibold">Quevedo · Atlantic Records Iberia</span>
+</div>
+</div>
+<span class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface hover:text-tertiary cursor-pointer">
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</span>
+</div>
+<!-- Key Lifecycle Metrics Grid -->
+<div class="grid grid-cols-3 gap-space-sm bg-surface-container-low p-space-sm rounded-lg mb-space-md text-center">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">CURRENT RANK</span>
+<span class="font-metric-display text-metric-display text-on-surface">#3</span>
+<span class="font-label-sm text-label-sm text-tertiary">▲ +1 today</span>
+</div>
+<div class="flex flex-col border-x border-outline-variant/20">
+<span class="font-label-sm text-label-sm text-outline">PEAK POSITION</span>
+<span class="font-metric-display text-metric-display text-tertiary">#1</span>
+<span class="font-label-sm text-label-sm text-outline">Day 11 (22d at #1)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">TOTAL CHART DAYS</span>
+<span class="font-metric-display text-metric-display text-secondary">84</span>
+<span class="font-label-sm text-label-sm text-outline">12 Consecutive Wks</span>
+</div>
+</div>
+<!-- Popularity Velocity vs Decay Curve Mini Sparkline -->
+<div class="flex flex-col bg-surface-container-low p-space-sm rounded-lg mb-space-md">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">84-Day Trajectory Sparkline</span>
+<span class="font-label-sm text-label-sm text-tertiary font-mono">Velocity: +1.4% (Stable)</span>
+</div>
+<div class="w-full h-16 flex items-center">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 320 60">
+<path d="M 0,55 Q 30,50 50,10 L 120,10 Q 180,12 240,18 T 320,24" fill="none" stroke="#4cd7f6" stroke-width="2.5"></path>
+<path d="M 0,55 Q 30,50 50,10 L 120,10 Q 180,12 240,18 T 320,24 L 320,60 L 0,60 Z" fill="url(#gradTertiary)" opacity="0.3"></path>
+<!-- Peak Indicator dot -->
+<circle cx="50" cy="10" fill="#ffffff" r="3"></circle>
+<circle cx="320" cy="24" fill="#4cd7f6" r="3.5"></circle>
+</svg>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-outline mt-1 font-mono">
+<span>Entry: #18 (Jul 08)</span>
+<span>Peak: #1 (Jul 19)</span>
+<span>Today: #3 (Sep 30)</span>
+</div>
+</div>
+<!-- Metadata & Projected Horizon Bar -->
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+<div class="flex items-center justify-between py-1 border-b border-outline-variant/15">
+<span class="text-outline">Track Duration:</span>
+<span class="font-label-md text-label-md text-on-surface font-mono">3m 06s</span>
+</div>
+<div class="flex items-center justify-between py-1 border-b border-outline-variant/15">
+<span class="text-outline">Release Package:</span>
+<span class="font-label-md text-label-md text-on-surface">Official Single (Non-Album)</span>
+</div>
+<div class="flex items-center justify-between py-1 border-b border-outline-variant/15">
+<span class="text-outline">Daily Stream Run-Rate:</span>
+<span class="font-label-md text-label-md text-on-surface font-mono">4,129,480 Spain DSP</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="text-outline">Catalog Decay Velocity:</span>
+<span class="font-label-md text-label-md text-secondary font-mono">-0.48% daily (Ultra-Resilient)</span>
+</div>
+</div>
+<!-- Forecasted Exit Horizon Box -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/80 border-l-4 border-secondary flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Projected Chart Horizon</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">32 More Days Forecasted</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+          Regression models predict <span class="text-on-surface">Columbia</span> will maintain Top 50 presence until <span class="text-secondary font-medium">Nov 02</span> before falling into catalog gold tier.
+        </p>
+</div>
+</div>
+</div>
+<!-- SECTION 3: Comparative Genre Decay Table (Velocity vs Exit Rate) -->
+<div class="flex flex-col bg-surface-container-low rounded-xl p-space-lg shadow-xl">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm mb-space-lg pb-space-sm border-b border-outline-variant/20">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Entry Velocity vs Exit Decay Rate by Iberian Sub-Genre</h2>
+<p class="font-body-sm text-body-sm text-outline">Comparative bench telemetry: 12-month aggregated survival curves across Spanish DSP ecosystems</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-sm">tune</span>
+<span>Configure Benchmarks</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-sm">file_download</span>
+<span>CSV Export</span>
+</button>
+</div>
+</div>
+<!-- Responsive Table Wrapper -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="font-label-sm text-label-sm uppercase tracking-wider text-outline border-b border-outline-variant/20">
+<th class="py-space-sm px-space-md">Genre Archetype</th>
+<th class="py-space-sm px-space-md">Avg Days to Peak</th>
+<th class="py-space-sm px-space-md">Avg Lifespan (&gt;Rank 50)</th>
+<th class="py-space-sm px-space-md">Weekly Decay Rate</th>
+<th class="py-space-sm px-space-md">Peak-to-Catalog %</th>
+<th class="py-space-sm px-space-md">Decay Curve Signature</th>
+<th class="py-space-sm px-space-md text-right">Strategic Rec</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10 font-body-sm text-body-sm">
+<!-- Row 1: Reggaeton & Urban Latino -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Reggaeton &amp; Neo-Perreo</span>
+<span class="font-label-sm text-label-sm text-outline">Puerto Rico / Canarias Axis</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-tertiary">7.2 Days</td>
+<td class="py-space-md px-space-md font-mono text-on-surface">68.4 Days</td>
+<td class="py-space-md px-space-md">
+<span class="font-mono text-error font-medium">-9.2% / wk</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs font-mono text-on-surface">
+<span>44.2%</span>
+<span class="w-12 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<span class="block h-full bg-primary-container" style="width: 44%"></span>
+</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<svg class="w-24 h-6" viewbox="0 0 100 24">
+<path d="M 0,22 Q 15,2 35,4 T 70,14 T 100,22" fill="none" stroke="#e11d48" stroke-width="2"></path>
+</svg>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="px-space-xs py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface font-semibold">Immediate Radio Add</span>
+</td>
+</tr>
+<!-- Row 2: Pop Español -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Pop Español &amp; Indie Pop</span>
+<span class="font-label-sm text-label-sm text-outline">Madrid / Barcelona Center</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-tertiary">22.4 Days</td>
+<td class="py-space-md px-space-md font-mono text-on-surface">94.1 Days</td>
+<td class="py-space-md px-space-md">
+<span class="font-mono text-secondary font-medium">-3.8% / wk</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs font-mono text-on-surface">
+<span>68.9%</span>
+<span class="w-12 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<span class="block h-full bg-tertiary" style="width: 68%"></span>
+</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<svg class="w-24 h-6" viewbox="0 0 100 24">
+<path d="M 0,20 Q 30,12 60,6 T 100,10" fill="none" stroke="#4cd7f6" stroke-width="2"></path>
+</svg>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="px-space-xs py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface font-semibold">Long-Tail Sync Pitch</span>
+</td>
+</tr>
+<!-- Row 3: Flamenco Fusion -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Flamenco Pop Fusion</span>
+<span class="font-label-sm text-label-sm text-outline">Andalucía Corridor</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-tertiary">38.0 Days</td>
+<td class="py-space-md px-space-md font-mono text-on-surface">112.6 Days</td>
+<td class="py-space-md px-space-md">
+<span class="font-mono text-tertiary font-medium">-2.1% / wk</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs font-mono text-on-surface">
+<span>82.4%</span>
+<span class="w-12 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<span class="block h-full bg-secondary" style="width: 82%"></span>
+</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<svg class="w-24 h-6" viewbox="0 0 100 24">
+<path d="M 0,22 C 20,22 40,16 60,10 C 80,4 90,6 100,8" fill="none" stroke="#ffb95f" stroke-width="2"></path>
+</svg>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="px-space-xs py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface font-semibold">Tour Bundle Push</span>
+</td>
+</tr>
+<!-- Row 4: Afro-Trap & Iberian Drill -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Afro-Trap &amp; Iberia Drill</span>
+<span class="font-label-sm text-label-sm text-outline">Suburban Madrid &amp; Valencia</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-tertiary">3.6 Days</td>
+<td class="py-space-md px-space-md font-mono text-on-surface">26.8 Days</td>
+<td class="py-space-md px-space-md">
+<span class="font-mono text-error font-medium">-16.5% / wk</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs font-mono text-on-surface">
+<span>18.6%</span>
+<span class="w-12 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<span class="block h-full bg-error" style="width: 18%"></span>
+</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<svg class="w-24 h-6" viewbox="0 0 100 24">
+<path d="M 0,24 L 15,2 L 40,18 L 70,24 L 100,24" fill="none" stroke="#ac8889" stroke-width="2"></path>
+</svg>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="px-space-xs py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface font-semibold">Remix / Feature Swap</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Terminal Footer Status Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-md mt-space-md border-t border-outline-variant/15 font-label-sm text-label-sm text-outline">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+<span>REGRESSION MODEL: Auto-updating against Spotify Spain Daily Top 50 (Sync timestamp: 04:00 CET)</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span>Variance Confidence: 94.8%</span>
+<span>Atlantic A&amp;R Strat Madrid</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Client Logic for Curve Tooltips and Toggles -->
+<script>
+  (function initTrajectoryInteractions() {
+    const tooltip = document.getElementById('chart-tooltip');
+    const ttTitle = document.getElementById('tt-title');
+    const ttDay = document.getElementById('tt-day');
+    const ttRank = document.getElementById('tt-rank');
+    const ttDecay = document.getElementById('tt-decay');
+    const ttStreams = document.getElementById('tt-streams');
+
+    // Chart Point Hover Tooltip
+    const circles = document.querySelectorAll('svg circle[data-day]');
+    circles.forEach(circle => {
+      circle.addEventListener('mouseenter', (e) => {
+        const title = circle.getAttribute('data-title');
+        const day = circle.getAttribute('data-day');
+        const rank = circle.getAttribute('data-rank');
+        const decay = circle.getAttribute('data-decay');
+        const streams = circle.getAttribute('data-streams');
+
+        if (tooltip) {
+          ttTitle.textContent = title;
+          ttDay.textContent = day;
+          ttRank.textContent = rank;
+          ttDecay.textContent = decay;
+          ttStreams.textContent = streams;
+
+          tooltip.classList.remove('hidden');
+          const rect = circle.getBoundingClientRect();
+          const parentRect = circle.closest('.relative').getBoundingClientRect();
+
+          tooltip.style.left = (rect.left - parentRect.left - 90) + 'px';
+          tooltip.style.top = (rect.top - parentRect.top - 105) + 'px';
+        }
+      });
+
+      circle.addEventListener('mouseleave', () => {
+        if (tooltip) tooltip.classList.add('hidden');
+      });
+    });
+
+    // Archetype Switcher Interaction
+    const archetypeButtons = document.querySelectorAll('#archetype-buttons button');
+    const curves = {
+      flash: { curve: document.getElementById('curve-flash'), area: document.getElementById('area-flash') },
+      anthem: { curve: document.getElementById('curve-anthem') },
+      slowburn: { curve: document.getElementById('curve-slowburn') },
+      album: { curve: document.getElementById('curve-album') },
+      radio: { curve: document.getElementById('curve-radio') }
+    };
+
+    archetypeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-curve');
+
+        archetypeButtons.forEach(b => {
+          b.classList.remove('bg-primary-container', 'text-on-primary-container');
+          b.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+        });
+
+        btn.classList.add('bg-primary-container', 'text-on-primary-container');
+        btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+
+        // Emphasize selected curve
+        Object.keys(curves).forEach(k => {
+          const item = curves[k];
+          if (item.curve) {
+            if (k === key) {
+              item.curve.style.opacity = '1.0';
+              item.curve.style.strokeWidth = '3.5';
+            } else {
+              item.curve.style.opacity = '0.2';
+              item.curve.style.strokeWidth = '1.5';
+            }
+          }
+          if (item.area) {
+            item.area.style.opacity = (k === key) ? '0.6' : '0.05';
+          }
+        });
+      });
+    });
+  })();
+</script></main></div></body></html>

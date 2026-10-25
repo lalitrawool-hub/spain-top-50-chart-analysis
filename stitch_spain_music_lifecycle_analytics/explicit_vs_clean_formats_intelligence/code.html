@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-container":"#007f95","on-surface-variant":"#e5bdbe","background":"#0f131c","on-primary-container":"#fffaf9","surface-dim":"#0f131c","inverse-primary":"#be0037","outline":"#ac8889","inverse-surface":"#dfe2ee","surface-container-highest":"#31353e","primary-fixed-dim":"#ffb3b6","inverse-on-surface":"#2c3039","on-tertiary-fixed":"#001f26","on-tertiary":"#003640","on-primary-fixed":"#40000c","on-primary":"#68001a","tertiary":"#4cd7f6","surface":"#0f131c","on-error":"#690005","surface-container-high":"#262a33","surface-container-low":"#181c24","tertiary-fixed-dim":"#4cd7f6","secondary-container":"#ee9800","error":"#ffb4ab","primary-fixed":"#ffdada","on-secondary-container":"#5b3800","surface-container-lowest":"#0a0e16","on-tertiary-container":"#f5fcff","primary-container":"#e11d48","on-secondary-fixed":"#2a1700","secondary":"#ffb95f","error-container":"#93000a","on-primary-fixed-variant":"#920028","surface-container":"#1c2028","surface-bright":"#353942","on-error-container":"#ffdad6","on-surface":"#dfe2ee","on-background":"#dfe2ee","surface-tint":"#ffb3b6","secondary-fixed":"#ffddb8","surface-variant":"#31353e","primary":"#ffb3b6","tertiary-fixed":"#acedff","secondary-fixed-dim":"#ffb95f","on-secondary":"#472a00","outline-variant":"#5c3f40","on-tertiary-fixed-variant":"#004e5c","on-secondary-fixed-variant":"#653e00"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{margin:"2rem","margin-mobile":"1rem","space-sm":"0.5rem","space-lg":"1.5rem",gutter:"1rem","space-md":"1rem","gutter-mobile":"0.75rem","space-xl":"2.5rem","space-xs":"0.25rem"},fontFamily:{"label-sm":["JetBrains Mono"],"metric-display":["JetBrains Mono"],"headline-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-md":["JetBrains Mono"],"headline-xl":["Plus Jakarta Sans"]},fontSize:{"label-sm":["10px",{lineHeight:"14px",fontWeight:"500"}],"metric-display":["28px",{lineHeight:"32px",fontWeight:"700"}],"headline-md":["18px",{lineHeight:"24px",fontWeight:"600"}],"body-md":["13px",{lineHeight:"18px",fontWeight:"400"}],"headline-lg":["24px",{lineHeight:"32px",fontWeight:"700"}],"headline-sm":["15px",{lineHeight:"20px",fontWeight:"600"}],"body-lg":["14px",{lineHeight:"20px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"500"}],"headline-xl":["32px",{lineHeight:"40px",fontWeight:"800"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest/90 backdrop-blur-2xl z-50 flex flex-col justify-between border-r border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-outline-variant/20 bg-surface-container-lowest/60"><div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(255,179,182,0.8)]"></div><span class="font-label-sm text-label-sm text-outline tracking-widest uppercase">WARNER MUSIC GROUP // INTEL</span></div><div class="px-space-md py-space-lg"><div class="px-space-sm mb-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline">Intelligence Modules</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="group flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="lifecycle-radar" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">radar</span><span class="font-headline-sm text-headline-sm tracking-tight">Lifecycle Radar</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface">01</span></a><a class="group flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="song-trajectories" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">show_chart</span><span class="font-headline-sm text-headline-sm tracking-tight">Song Trajectories</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface">02</span></a><a class="group flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="rotation-dynamics" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">published_with_changes</span><span class="font-headline-sm text-headline-sm tracking-tight">Rotation Dynamics</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface">03</span></a><a aria-current="page" class="group flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all bg-primary-container text-on-primary-container font-headline-sm" data-path="explicit-vs-clean-and-formats" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">graphic_eq</span><span class="font-headline-sm text-headline-sm tracking-tight">Explicit vs Formats</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface">04</span></a><a class="group flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ar-playbook" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">auto_stories</span><span class="font-headline-sm text-headline-sm tracking-tight">A&amp;R Playbook</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface">05</span></a></nav></div></div><div class="p-space-md m-space-md rounded-xl bg-surface-container-low/70 border border-outline-variant/30 backdrop-blur-md"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">DSP Ingest Terminal</span><span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span></div><div class="font-label-md text-label-md text-on-surface flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary text-sm">sync</span><span>PROMETHEUS V4.8</span></div><div class="mt-space-xs font-label-sm text-label-sm text-outline-variant">Madrid Node · Latency 14ms</div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-28 bg-surface/90 backdrop-blur-xl z-40 border-b border-outline-variant/20 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-lg flex items-center justify-between border-b border-outline-variant/15"><div class="flex items-center gap-space-md"><img alt="Atlantic Iberian Sonic Intelligence Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VkVDnl7F2GLbZtqNiLyrJZkzQJ10EOwcl8WhixSl73XuExkjKJ7HkcVxjhaTu0lUALuZx78vnhEs1PV-M0D3DcjyG8IupHLyyASOeefQPssvrh4UFlMBJHRzq1G8x5dr3TX5sPwGRaV9hegakIGEz0kBhmMhReGwH46oig8LVmAx0jU9ZUTVUkoYDSJooPnj7zAcOO3JrPlPdlbs-Fd87kDxmWcVcgYBPBk2GFbrccWX1l0CVWY-eNjVM"/><div class="flex items-center gap-space-sm"><span class="px-space-xs py-0.5 bg-surface-container-highest border border-outline-variant/40 rounded text-on-surface font-label-sm text-label-sm uppercase tracking-wider">ATLANTIC RECORDS</span><span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">SONIC IBERIA</span><span class="font-label-md text-label-md text-outline">// Lifecycle Intelligence</span></div></div><div class="flex items-center gap-space-lg"><div class="hidden xl:flex items-center gap-space-md px-space-md py-1 rounded bg-surface-container-low border border-outline-variant/20"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">SPAIN TOP 50 DAILY</span></div><span class="text-outline font-label-sm">·</span><span class="font-label-sm text-label-sm text-outline">MADRID HQ</span><span class="text-outline font-label-sm">·</span><span class="font-label-sm text-label-sm text-tertiary">50 ENTRIES/DAY SYNCED</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/20 font-label-sm text-label-sm text-on-surface"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>API STATUS: SYNCHRONIZED</span></div><button class="flex items-center gap-space-xs bg-primary-container text-on-primary-container px-space-md py-1.5 rounded font-label-md text-label-md uppercase tracking-wider hover:bg-inverse-primary hover:text-on-primary transition-all shadow-[0_0_12px_rgba(225,29,72,0.35)]" type="button"><span class="material-symbols-outlined text-sm">download</span><span>Generate Executive Brief</span></button><div class="flex items-center gap-space-md pl-space-sm border-l border-outline-variant/30"><div class="relative flex items-center justify-center p-1 rounded-full text-on-surface-variant hover:text-on-surface cursor-pointer"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-primary-container rounded-full ring-2 ring-surface"></span></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLfM8P5Rb7FRVbYqBO2CQ7dhHy5N0_OaPAxqzCDoKItJG9zjQZcTPOiy2zZOBFvjAGxcb2-UJXQ-TfLs3Dio2BqonpuAxZJYGQIqSaSCynJ7H_bLHCA1IetlJwa1NDc2UiX-ASDrQC-GCFjHGvtJ1TbWiUb_zAu79zU82rMMuu6VnkrZOWM7DDYRp-tLnm7CtxI6dTB1fq9KtQemp0GCCDI4WD_yirZMMQueQqSJCpE5yT0LTBpaqM"/><div class="flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-none">Elena Vargas</span><span class="font-label-sm text-label-sm text-outline mt-0.5 leading-none">Head of A&amp;R Strategy</span></div></div></div></div></div><div class="h-12 px-space-lg flex items-center justify-between bg-surface-container-lowest/50 text-on-surface-variant"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container border border-outline-variant/25 text-on-surface font-label-sm text-label-sm cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-tertiary text-sm">calendar_today</span><span>Last 90 Days (Oct 1 - Dec 31)</span><span class="material-symbols-outlined text-outline text-sm">expand_more</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container border border-outline-variant/25 text-on-surface font-label-sm text-label-sm cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-secondary text-sm">filter_alt</span><span>All Stages</span><span class="material-symbols-outlined text-outline text-sm">expand_more</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container border border-outline-variant/25 text-on-surface font-label-sm text-label-sm cursor-pointer hover:border-outline transition-colors"><span class="px-1 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold">E</span><span>Explicit: All [E]</span><span class="material-symbols-outlined text-outline text-sm">expand_more</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container border border-outline-variant/25 text-on-surface font-label-sm text-label-sm cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-outline text-sm">album</span><span>Singles &amp; Albums</span><span class="material-symbols-outlined text-outline text-sm">expand_more</span></div></div><div class="flex items-center"><div class="relative flex items-center w-64"><span class="material-symbols-outlined absolute left-space-sm text-outline text-sm">search</span><input class="w-full bg-surface-container-high/60 border border-outline-variant/30 rounded pl-8 pr-space-sm py-1 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-tertiary focus:ring-1 focus:ring-tertiary transition-all" placeholder="Filter song or artist..." type="text"/></div></div></div></header><main class="relative pt-28 bg-surface flex-1 w-full px-space-margin"><div class="flex flex-col w-full pb-space-xl">
+<!-- Micro Telemetry Ticker Strip -->
+<div class="w-full flex flex-wrap items-center justify-between gap-space-md py-space-sm mb-space-lg bg-surface-container-low rounded-xl px-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+        STREAM ANALYTICS // MODULE 04
+      </span>
+<span class="font-label-sm text-label-sm text-outline">|</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">DSP DATASET: SPAIN TOP 50 AGGREGATED (90D AUDIT)</span>
+</div>
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface">
+<span class="text-tertiary">Urban/Trap/Reggaeton</span>
+<span class="text-outline">vs</span>
+<span class="text-secondary">Commercial Pop/Radio</span>
+</div>
+<div class="hidden md:flex items-center gap-space-xs bg-surface-container-high px-space-sm py-0.5 rounded text-outline font-label-sm text-label-sm">
+<span>CONFIDENCE: 98.4%</span>
+</div>
+</div>
+</div>
+<!-- Hero Insight Grid: Dual-Color Telemetry & Metric Matrix -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter mb-space-xl">
+<!-- Left Hero Card: Comparative Velocity Curves -->
+<div class="xl:col-span-8 bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-md relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -left-12 -bottom-12 w-48 h-48 bg-tertiary-container/15 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded bg-primary-container"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Content Maturity &amp; Velocity Archetypes</h2>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-highest text-tertiary uppercase">Normalized 60-Day Arc</span>
+</div>
+<div class="flex items-center gap-space-md bg-surface-container px-space-sm py-1 rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-0.5 bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Explicit [E]</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-0.5 bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Clean / Radio</span>
+</div>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mb-space-lg">
+          Explicit urban cuts exhibit aggressive initial streaming adoption powered by algorithmic discovery and youth demographics in Spain, peaking in under 8 days. Clean formats unlock structural radio crossover, yielding +24.6% longer post-peak runway.
+        </p>
+<!-- Inline Lifecycle SVG Visualization -->
+<div class="relative w-full h-64 bg-surface-container-lowest/80 rounded-lg p-space-md flex flex-col justify-end overflow-hidden shadow-inner">
+<!-- Background Grid Lines -->
+<div class="absolute inset-0 flex flex-col justify-between p-space-md pointer-events-none opacity-20">
+<div class="w-full h-px bg-outline-variant"></div>
+<div class="w-full h-px bg-outline-variant"></div>
+<div class="w-full h-px bg-outline-variant"></div>
+<div class="w-full h-px bg-outline-variant"></div>
+</div>
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 700 200">
+<defs>
+<lineargradient id="explicitGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#e11d48" stop-opacity="0.38"></stop>
+<stop offset="100%" stop-color="#e11d48" stop-opacity="0"></stop>
+</lineargradient>
+<lineargradient id="cleanGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4cd7f6" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<!-- Guide Markers -->
+<line opacity="0.4" stroke="#ac8889" stroke-dasharray="3 3" stroke-width="1" x1="90" x2="90" y1="0" y2="190"></line>
+<text fill="#ffb3b6" font-family="JetBrains Mono" font-size="10" x="96" y="24">PEAK DAY 7.4 (Explicit)</text>
+<line opacity="0.4" stroke="#ac8889" stroke-dasharray="3 3" stroke-width="1" x1="170" x2="170" y1="0" y2="190"></line>
+<text fill="#4cd7f6" font-family="JetBrains Mono" font-size="10" x="176" y="44">PEAK DAY 12.8 (Clean)</text>
+<!-- Clean Area & Line -->
+<path d="M 0 190 Q 70 140 170 35 T 320 80 T 520 120 T 700 170 L 700 190 L 0 190 Z" fill="url(#cleanGrad)"></path>
+<path d="M 0 190 Q 70 140 170 35 T 320 80 T 520 120 T 700 170" fill="none" stroke="#4cd7f6" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Explicit Area & Line -->
+<path d="M 0 190 Q 35 70 90 12 T 210 95 T 380 155 T 520 185 L 700 190 L 700 190 L 0 190 Z" fill="url(#explicitGrad)"></path>
+<path d="M 0 190 Q 35 70 90 12 T 210 95 T 380 155 T 520 185 L 700 190" fill="none" stroke="#e11d48" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Highlight Nodes -->
+<circle class="animate-pulse" cx="90" cy="12" fill="#e11d48" r="5"></circle>
+<circle cx="170" cy="35" fill="#4cd7f6" r="5"></circle>
+</svg>
+<!-- Chart Bottom Axis Legend -->
+<div class="flex justify-between items-center pt-2 font-label-sm text-label-sm text-outline z-10">
+<span>DAY 0 (Ingest)</span>
+<span>DAY 10</span>
+<span>DAY 20</span>
+<span>DAY 30</span>
+<span>DAY 45 (Tail phase)</span>
+<span>DAY 60</span>
+</div>
+</div>
+</div>
+<!-- Live Comparison Slider Micro-Interaction -->
+<div class="mt-space-md pt-space-md bg-surface-container rounded-lg p-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Simulated Stream Horizon Decay Calculator</span>
+<span class="font-label-md text-label-md text-tertiary" id="sliderOutput">Day 30 Projection</span>
+</div>
+<input class="w-full accent-primary h-1.5 bg-surface-container-highest rounded cursor-pointer" id="horizonSlider" max="60" min="1" type="range" value="30"/>
+<div class="flex justify-between text-outline font-label-sm text-label-sm mt-1">
+<span>Week 1 (Spike)</span>
+<span>Week 4 (Maturity Pivot)</span>
+<span>Week 8+ (Long-Tail Retention)</span>
+</div>
+</div>
+</div>
+<!-- Right KPI Comparative Card & Strategy Callout -->
+<div class="xl:col-span-4 flex flex-col gap-gutter">
+<!-- KPI Split Table Block -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Telemetry Benchmark Split</h3>
+<span class="font-label-sm text-label-sm text-tertiary px-space-xs py-0.5 rounded bg-surface-container">SPAIN DSPs</span>
+</div>
+<!-- Split Rows -->
+<div class="flex flex-col gap-space-sm">
+<!-- Row 1 -->
+<div class="p-space-sm rounded bg-surface-container flex items-center justify-between">
+<div>
+<div class="font-label-sm text-label-sm text-outline uppercase">Chart Residence</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Avg days on Spain Top 50</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-metric-display text-headline-sm text-primary">34.2d</span>
+<span class="font-label-sm text-label-sm text-outline">/</span>
+<span class="font-metric-display text-headline-sm text-tertiary">44.6d</span>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="p-space-sm rounded bg-surface-container flex items-center justify-between">
+<div>
+<div class="font-label-sm text-label-sm text-outline uppercase">Entry-to-Peak Speed</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Time to achieve #1 rank</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="text-right">
+<div class="font-metric-display text-headline-sm text-primary">7.4d</div>
+<div class="font-label-sm text-label-sm text-primary-fixed-dim">2.4x Steeper</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">/</span>
+<div class="text-right">
+<div class="font-metric-display text-headline-sm text-tertiary">12.8d</div>
+<div class="font-label-sm text-label-sm text-outline">Linear</div>
+</div>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="p-space-sm rounded bg-surface-container flex items-center justify-between">
+<div>
+<div class="font-label-sm text-label-sm text-outline uppercase">Peak Popularity Index</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">DSP Algorithm index</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-metric-display text-headline-sm text-primary">82.4</span>
+<span class="font-label-sm text-label-sm text-outline">/</span>
+<span class="font-metric-display text-headline-sm text-tertiary">78.1</span>
+</div>
+</div>
+<!-- Row 4 -->
+<div class="p-space-sm rounded bg-surface-container flex items-center justify-between">
+<div>
+<div class="font-label-sm text-label-sm text-outline uppercase">Decay Velocity</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Post-peak rank drop/wk</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-metric-display text-headline-sm text-primary">-4.2 <span class="font-label-sm text-label-sm text-outline">rnk/w</span></span>
+<span class="font-label-sm text-label-sm text-outline">/</span>
+<span class="font-metric-display text-headline-sm text-tertiary">-2.8 <span class="font-label-sm text-label-sm text-outline">rnk/w</span></span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="text-primary font-bold">● EXPLICIT RECORDINGS</span>
+<span class="text-tertiary font-bold">● CLEAN / NON-EXPLICIT</span>
+</div>
+</div>
+<!-- Tactical Executive Callout Box -->
+<div class="bg-gradient-to-br from-surface-container-high to-surface-container-low p-space-md rounded-xl shadow-sm relative overflow-hidden">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-headline-md">lightbulb</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface mb-1">A&amp;R Strategic Thesis for Iberia</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              In Spain, youth-targeted Urban records must deploy dirty edits for Week 1 streaming velocity, followed immediately by radio-targeted clean alternate masters at Day 14 to secure Los40 airplay and arrest weekly rank attrition.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Single vs Album Track Longevity & Retention Analysis -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter mb-space-xl">
+<!-- The Album Effect Analysis Narrative & Stats -->
+<div class="xl:col-span-5 bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">album</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">The 'Album Drop' Cannibalization Matrix</h3>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary uppercase">LP Decay Risk</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+          When major Spanish &amp; Latin LPs release, up to 12 tracks flood the Top 50 concurrently. However, deep-cuts experience rapid fatigue with over 80% exiting chart within 18 calendar days, while isolated focus singles hold a <strong class="text-on-surface">1.45x retention advantage</strong>.
+        </p>
+<!-- Stat Highlight Grid -->
+<div class="grid grid-cols-2 gap-space-md mb-space-lg">
+<div class="bg-surface-container p-space-md rounded-lg">
+<div class="font-label-sm text-label-sm text-outline uppercase">Single Retention Ratio</div>
+<div class="font-metric-display text-metric-display text-secondary mt-1">1.45x</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Over album deep-cuts</div>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg">
+<div class="font-label-sm text-label-sm text-outline uppercase">Deep Cut Attrition</div>
+<div class="font-metric-display text-metric-display text-primary mt-1">80.2%</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Exits chart within 18 days</div>
+</div>
+</div>
+<!-- Featured Album Case Study Micro Card -->
+<div class="flex items-center gap-space-md bg-surface-container-high/60 p-space-sm rounded-lg">
+<div class="w-12 h-12 rounded bg-surface-container-highest flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Modern high contrast album art cover with neon Iberian typography and dark aesthetic vinyl aesthetics for Spanish Latin urban trap chart" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADC2n5TvyD5dF2HNEHvqqq5WfaDrnumDHBREUAa_I2X34IHsXCSNgytvmOPtWuBW6TRDSYw1dkGa8rq2jFH5R0ESP48X28J6IeDTdC9D6sWYaCc4R_wFbaTClTq7qwkb2MqxfNIyTPCOcMR9H9aC-waJfKxr2bop0cxA9m6n0TKzxYGkpRAPZt5Bzz1L60TXKDDADndsQCsNExrKFUHYVBvo1jfg4iu7ZPyULCk4cPjTCihPVpsnQQ"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">Case Example: 16-Track Urban LP</div>
+<div class="font-label-sm text-label-sm text-tertiary">14 Tracks Debut • 2 Survive Past Day 25</div>
+</div>
+<span class="material-symbols-outlined text-outline">analytics</span>
+</div>
+</div>
+<div class="mt-space-md font-label-sm text-label-sm text-outline flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+        RECOMMENDATION: MAXIMUM 2 CONCURRENT FOCUS SINGLES PER CYCLE
+      </div>
+</div>
+<!-- Album Size vs Retention Survival Chart -->
+<div class="xl:col-span-7 bg-surface-container-low rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Track Survival vs Album Track Count</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Percentage of total LP tracks maintaining chart status past Day 30</p>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Sample: 42 Spanish Releases</span>
+</div>
+<!-- Bar Graph Comparison -->
+<div class="flex flex-col gap-space-md my-space-md">
+<!-- Bucket 1: 1-3 Tracks (Singles / Bundles) -->
+<div>
+<div class="flex items-center justify-between text-body-sm font-headline-sm mb-1">
+<span class="text-on-surface flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+              Standalone Singles &amp; 2-Track Drops
+            </span>
+<span class="font-metric-display text-label-md text-tertiary">68.4% Survival</span>
+</div>
+<div class="w-full h-4 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-tertiary rounded-full transition-all duration-700" style="width: 68.4%;"></div>
+</div>
+<div class="flex justify-between text-outline font-label-sm text-label-sm mt-0.5">
+<span>High algorithmic concentration</span>
+<span>Avg Chart Life: 84 Days</span>
+</div>
+</div>
+<!-- Bucket 2: 8-12 Tracks (Tight Concept LP) -->
+<div>
+<div class="flex items-center justify-between text-body-sm font-headline-sm mb-1">
+<span class="text-on-surface flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Tight Albums (8 - 12 Tracks)
+            </span>
+<span class="font-metric-display text-label-md text-secondary">34.8% Survival</span>
+</div>
+<div class="w-full h-4 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary rounded-full transition-all duration-700" style="width: 34.8%;"></div>
+</div>
+<div class="flex justify-between text-outline font-label-sm text-label-sm mt-0.5">
+<span>Optimal balance between stream count &amp; cannibalization</span>
+<span>Avg Chart Life: 32 Days</span>
+</div>
+</div>
+<!-- Bucket 3: 13-16 Tracks (Standard LP) -->
+<div>
+<div class="flex items-center justify-between text-body-sm font-headline-sm mb-1">
+<span class="text-on-surface flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+              Standard Deluxe (13 - 16 Tracks)
+            </span>
+<span class="font-metric-display text-label-md text-on-surface-variant">19.2% Survival</span>
+</div>
+<div class="w-full h-4 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-surface-container-highest rounded-full transition-all duration-700" style="width: 19.2%;"></div>
+</div>
+<div class="flex justify-between text-outline font-label-sm text-label-sm mt-0.5">
+<span>Algorithmic dilutive fatigue</span>
+<span>Avg Chart Life: 18 Days</span>
+</div>
+</div>
+<!-- Bucket 4: 18+ Tracks (Bloated Trap LP) -->
+<div>
+<div class="flex items-center justify-between text-body-sm font-headline-sm mb-1">
+<span class="text-on-surface flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+              Extended Mega-LPs (18+ Tracks)
+            </span>
+<span class="font-metric-display text-label-md text-primary">11.5% Survival</span>
+</div>
+<div class="w-full h-4 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-primary-container rounded-full transition-all duration-700" style="width: 11.5%;"></div>
+</div>
+<div class="flex justify-between text-outline font-label-sm text-label-sm mt-0.5">
+<span>Extreme churn: listeners skip non-singles by Day 7</span>
+<span>Avg Chart Life: 11 Days</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">A&amp;R Strategy Mandate:</span>
+<span class="font-headline-sm text-body-sm text-tertiary">Cap Studio Albums at 11 Tracks for Maximum Residual Catalog Value</span>
+</div>
+</div>
+</div>
+<!-- Section 3: Track Duration vs Retention Correlation (Duration Optimization for Spain) -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-md mb-space-xl">
+<div class="flex flex-wrap items-center justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary">timelapse</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Track Duration vs Chart Retention Index</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Spain Top 50 duration sweet spot modeling for optimal streaming looping &amp; completion rates</p>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-lg">
+<span class="font-label-sm text-label-sm text-outline">Optimum Duration Band:</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">2:45 – 3:05 MIN</span>
+</div>
+</div>
+<!-- Duration Buckets 3-Column Bento Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-space-lg">
+<!-- Bucket A -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">Short Form Velocity</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-surface-container-highest rounded text-on-surface">22% of Chart</span>
+</div>
+<div class="font-metric-display text-headline-xl text-on-surface mb-1">&lt; 2:30 <span class="font-body-sm text-body-sm text-outline">min</span></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">High initial replay volume on TikTok &amp; Reels; vulnerable to rapid listener burnout and low playlist stickiness.</p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low p-space-xs rounded flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">Retention Score:</span>
+<span class="text-primary font-bold">54.2 / 100</span>
+</div>
+</div>
+<!-- Bucket B (Sweet Spot Highlighted) -->
+<div class="bg-surface-container-high p-space-md rounded-xl flex flex-col justify-between shadow-md relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-secondary/10 rounded-full blur-xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+              SPAIN SWEET SPOT
+            </span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-secondary/20 text-secondary rounded font-bold">58% of Chart</span>
+</div>
+<div class="font-metric-display text-headline-xl text-secondary mb-1">2:30 – 3:15 <span class="font-body-sm text-body-sm text-outline">min</span></div>
+<p class="font-body-sm text-body-sm text-on-surface">The algorithmic sweet spot. Maximizes Spotify Spain playlist completion rate and qualifies for Los40 programming rotation.</p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest p-space-xs rounded flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">Retention Score:</span>
+<span class="text-secondary font-bold text-headline-sm">76.4 / 100</span>
+</div>
+</div>
+<!-- Bucket C -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">Extended Form</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-surface-container-highest rounded text-on-surface">20% of Chart</span>
+</div>
+<div class="font-metric-display text-headline-xl text-on-surface mb-1">&gt; 3:15 <span class="font-body-sm text-body-sm text-outline">min</span></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Slower velocity, higher skip rate on free-tier ad users. Only sustainable when driven by high-reputation marquee headliners.</p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low p-space-xs rounded flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">Retention Score:</span>
+<span class="text-outline font-bold">48.9 / 100</span>
+</div>
+</div>
+</div>
+<!-- Duration vs Days Scatter-Distribution SVG -->
+<div class="w-full bg-surface-container-lowest rounded-lg p-space-md">
+<div class="flex items-center justify-between mb-space-sm text-outline font-label-sm text-label-sm">
+<span class="uppercase tracking-wider">CORRELATION SCATTER: DURATION (SECONDS) VS DAYS SURVIVED ON TOP 50</span>
+<span class="text-secondary">● OPTIMAL RETENTION CLUSTER</span>
+</div>
+<div class="h-48 w-full relative">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 800 160">
+<!-- Guide Band for Sweet Spot (150s - 195s -> x coordinates 220 to 450) -->
+<rect fill="#ee9800" fill-opacity="0.08" height="135" rx="6" width="220" x="230" y="10"></rect>
+<text fill="#ffb95f" font-family="JetBrains Mono" font-size="10" x="240" y="28">MAX RETENTION ZONE (150s-195s)</text>
+<!-- Dotted Baseline -->
+<line opacity="0.2" stroke="#ac8889" stroke-width="1" x1="40" x2="780" y1="145" y2="145"></line>
+<!-- Scatter Dots -->
+<!-- Short tracks (<150s) -->
+<circle cx="90" cy="115" fill="#ffb3b6" opacity="0.7" r="4"></circle>
+<circle cx="120" cy="98" fill="#ffb3b6" opacity="0.6" r="3.5"></circle>
+<circle cx="150" cy="85" fill="#ffb3b6" opacity="0.8" r="4.5"></circle>
+<circle cx="170" cy="120" fill="#ffb3b6" opacity="0.5" r="3"></circle>
+<circle cx="210" cy="90" fill="#ffb3b6" opacity="0.6" r="4"></circle>
+<!-- Sweet Spot Clustered High Days (150-195s) -->
+<circle cx="250" cy="38" fill="#ffb95f" opacity="0.9" r="5"></circle>
+<circle cx="270" cy="45" fill="#ffb95f" opacity="0.95" r="6"></circle>
+<circle cx="295" cy="30" fill="#4cd7f6" opacity="0.9" r="5"></circle>
+<circle cx="310" cy="60" fill="#ffb95f" opacity="0.8" r="4"></circle>
+<circle cx="330" cy="22" fill="#ee9800" opacity="1" r="6.5"></circle>
+<circle cx="355" cy="35" fill="#ffb95f" opacity="0.9" r="5"></circle>
+<circle cx="380" cy="52" fill="#4cd7f6" opacity="0.9" r="5.5"></circle>
+<circle cx="410" cy="40" fill="#ffb95f" opacity="0.85" r="5"></circle>
+<circle cx="435" cy="65" fill="#ffb95f" opacity="0.7" r="4"></circle>
+<!-- Long Tracks (>195s) -->
+<circle cx="480" cy="95" fill="#ac8889" opacity="0.6" r="4"></circle>
+<circle cx="510" cy="110" fill="#ac8889" opacity="0.5" r="3.5"></circle>
+<circle cx="540" cy="70" fill="#4cd7f6" opacity="0.7" r="5"></circle>
+<circle cx="580" cy="125" fill="#ac8889" opacity="0.5" r="4"></circle>
+<circle cx="620" cy="105" fill="#ac8889" opacity="0.6" r="4"></circle>
+<circle cx="680" cy="130" fill="#ac8889" opacity="0.4" r="3.5"></circle>
+<circle cx="730" cy="90" fill="#ffb3b6" opacity="0.6" r="5"></circle>
+</svg>
+</div>
+<div class="flex justify-between items-center text-outline font-label-sm text-label-sm mt-1 px-space-xs">
+<span>1:45 min (105s)</span>
+<span>2:15 min (135s)</span>
+<span class="text-secondary font-bold">2:45 min (165s)</span>
+<span class="text-secondary font-bold">3:05 min (185s)</span>
+<span>3:30 min (210s)</span>
+<span>4:00+ min (240s+)</span>
+</div>
+</div>
+</div>
+<!-- Section 4: A&R Actionable Release Optimization Rules -->
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary">auto_stories</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">A&amp;R Actionable Release Rules • Atlantic Iberia</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Algorithm-Driven SOP</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Rule 1: Release Format Strategy -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-md flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined">dataset</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">RULE 01 // FORMAT SEEDING</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1 mb-space-sm">Staggered Singles Lead-Time</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Never drop LP tracks un-seeded. Prioritize standalone single releases with a minimum 2-week lead gap before bundling into an EP or LP to maximize Spotify 'This Is' priority indexing.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-high/60 p-space-sm rounded font-label-sm text-label-sm text-on-surface flex items-center justify-between">
+<span class="text-outline">ACTION:</span>
+<span class="text-tertiary">2-Week Single Lead Window</span>
+</div>
+</div>
+<!-- Rule 2: Explicit Tag Strategy -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-md flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined">graphic_eq</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">RULE 02 // METADATA &amp; VERSIONS</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1 mb-space-sm">Dual-Master Launch Day Sync</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Ingest both Explicit and Clean audio tracks simultaneously. Tag the Explicit master for editorial DSP urban playlists (Manso Flow, Viva Latino) while queuing Clean edit to Promusicae radio tracking on Day 14.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-high/60 p-space-sm rounded font-label-sm text-label-sm text-on-surface flex items-center justify-between">
+<span class="text-outline">ACTION:</span>
+<span class="text-secondary">Simultaneous DSP Delivery</span>
+</div>
+</div>
+<!-- Rule 3: Target Duration -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-md flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary mb-space-md">
+<span class="material-symbols-outlined">timer</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-bold">RULE 03 // AUDIO ARTIFACTS</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1 mb-space-sm">Target Duration 2m45s – 3m05s</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Direct mix &amp; mastering teams to stay strictly between 165 and 185 seconds. This guarantees optimal streaming completion metrics (&gt;82%) required by Spanish recommendation engines.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-high/60 p-space-sm rounded font-label-sm text-label-sm text-on-surface flex items-center justify-between">
+<span class="text-outline">ACTION:</span>
+<span class="text-primary font-bold">Mix Lock: 175s Optimal</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const slider = document.getElementById('horizonSlider');
+    const output = document.getElementById('sliderOutput');
+    if (slider && output) {
+      slider.addEventListener('input', function(e) {
+        const val = e.target.value;
+        output.textContent = 'Day ' + val + ' Projection: ' + (val < 15 ? 'Aggressive Surge Phase' : (val < 40 ? 'Peak Velocity Plateau' : 'Long-Tail Crossover Window'));
+      });
+    }
+  })();
+</script></main></div></body></html>

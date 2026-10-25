@@ -1,9 +1,9 @@
 [theme]
 base = "dark"
-primaryColor = "#E11D48"
-backgroundColor = "#0B0F17"
-secondaryBackgroundColor = "#131B2E"
-textColor = "#DFE2EE"
+primaryColor = "#606060"
+backgroundColor = "#080808"
+secondaryBackgroundColor = "#111111"
+textColor = "#F2F2F2"
 font = "Plus Jakarta Sans:https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
 headingFont = "Plus Jakarta Sans:https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
 codeFont = "JetBrains Mono:https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
@@ -17,19 +17,19 @@ baseRadius = "8px"
 buttonRadius = "4px"
 showWidgetBorder = true
 showSidebarBorder = true
-borderColor = "#334155"
-chartCategoricalColors = ["#06B6D4", "#E11D48", "#F59E0B", "#10B981", "#8B5CF6", "#64748B"]
-dataframeHeaderBackgroundColor = "#1E293B"
-dataframeHeaderTextColor = "#DFE2EE"
-dataframeBorderColor = "#334155"
+borderColor = "#333333"
+chartCategoricalColors = ["#FFFFFF", "#D4D4D4", "#A1A1AA", "#737373", "#525252", "#F5F5F5"]
+dataframeHeaderBackgroundColor = "#1A1A1A"
+dataframeHeaderTextColor = "#F2F2F2"
+dataframeBorderColor = "#333333"
 
 [theme.sidebar]
-backgroundColor = "#0A0E16"
-secondaryBackgroundColor = "#131B2E"
-textColor = "#DFE2EE"
-primaryColor = "#E11D48"
-borderColor = "#334155"
-codeBackgroundColor = "#1E293B"
+backgroundColor = "#050505"
+secondaryBackgroundColor = "#111111"
+textColor = "#F2F2F2"
+primaryColor = "#606060"
+borderColor = "#333333"
+codeBackgroundColor = "#1A1A1A"
 
 [server]
 headless = true

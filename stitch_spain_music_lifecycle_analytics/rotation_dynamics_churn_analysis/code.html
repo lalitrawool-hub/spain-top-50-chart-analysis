@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-container":"#007f95","on-surface-variant":"#e5bdbe","background":"#0f131c","on-primary-container":"#fffaf9","surface-dim":"#0f131c","inverse-primary":"#be0037","outline":"#ac8889","inverse-surface":"#dfe2ee","surface-container-highest":"#31353e","primary-fixed-dim":"#ffb3b6","inverse-on-surface":"#2c3039","on-tertiary-fixed":"#001f26","on-tertiary":"#003640","on-primary-fixed":"#40000c","on-primary":"#68001a","tertiary":"#4cd7f6","surface":"#0f131c","on-error":"#690005","surface-container-high":"#262a33","surface-container-low":"#181c24","tertiary-fixed-dim":"#4cd7f6","secondary-container":"#ee9800","error":"#ffb4ab","primary-fixed":"#ffdada","on-secondary-container":"#5b3800","surface-container-lowest":"#0a0e16","on-tertiary-container":"#f5fcff","primary-container":"#e11d48","on-secondary-fixed":"#2a1700","secondary":"#ffb95f","error-container":"#93000a","on-primary-fixed-variant":"#920028","surface-container":"#1c2028","surface-bright":"#353942","on-error-container":"#ffdad6","on-surface":"#dfe2ee","on-background":"#dfe2ee","surface-tint":"#ffb3b6","secondary-fixed":"#ffddb8","surface-variant":"#31353e","primary":"#ffb3b6","tertiary-fixed":"#acedff","secondary-fixed-dim":"#ffb95f","on-secondary":"#472a00","outline-variant":"#5c3f40","on-tertiary-fixed-variant":"#004e5c","on-secondary-fixed-variant":"#653e00"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{margin:"2rem","margin-mobile":"1rem","space-sm":"0.5rem","space-lg":"1.5rem",gutter:"1rem","space-md":"1rem","gutter-mobile":"0.75rem","space-xl":"2.5rem","space-xs":"0.25rem"},fontFamily:{"label-sm":["JetBrains Mono"],"metric-display":["JetBrains Mono"],"headline-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-md":["JetBrains Mono"],"headline-xl":["Plus Jakarta Sans"]},fontSize:{"label-sm":["10px",{lineHeight:"14px",fontWeight:"500"}],"metric-display":["28px",{lineHeight:"32px",fontWeight:"700"}],"headline-md":["18px",{lineHeight:"24px",fontWeight:"600"}],"body-md":["13px",{lineHeight:"18px",fontWeight:"400"}],"headline-lg":["24px",{lineHeight:"32px",fontWeight:"700"}],"headline-sm":["15px",{lineHeight:"20px",fontWeight:"600"}],"body-lg":["14px",{lineHeight:"20px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"500"}],"headline-xl":["32px",{lineHeight:"40px",fontWeight:"800"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest/90 backdrop-blur-2xl z-50 flex flex-col justify-between border-r border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-outline-variant/20 bg-surface-container-lowest/60"><div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(255,179,182,0.8)]"></div><span class="font-label-sm text-label-sm text-outline tracking-widest uppercase">WARNER MUSIC GROUP // INTEL</span></div><div class="px-space-md py-space-lg"><div class="px-space-sm mb-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline">Intelligence Modules</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="group flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="lifecycle-radar" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">radar</span><span class="font-headline-sm text-headline-sm tracking-tight">Lifecycle Radar</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface">01</span></a><a class="group flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="song-trajectories" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">show_chart</span><span class="font-headline-sm text-headline-sm tracking-tight">Song Trajectories</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface">02</span></a><a aria-current="page" class="group flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all bg-primary-container text-on-primary-container font-headline-sm" data-path="rotation-dynamics" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">published_with_changes</span><span class="font-headline-sm text-headline-sm tracking-tight">Rotation Dynamics</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface">03</span></a><a class="group flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="explicit-vs-clean-and-formats" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">graphic_eq</span><span class="font-headline-sm text-headline-sm tracking-tight">Explicit vs Formats</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface">04</span></a><a class="group flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ar-playbook" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">auto_stories</span><span class="font-headline-sm text-headline-sm tracking-tight">A&amp;R Playbook</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface">05</span></a></nav></div></div><div class="p-space-md m-space-md rounded-xl bg-surface-container-low/70 border border-outline-variant/30 backdrop-blur-md"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">DSP Ingest Terminal</span><span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span></div><div class="font-label-md text-label-md text-on-surface flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary text-sm">sync</span><span>PROMETHEUS V4.8</span></div><div class="mt-space-xs font-label-sm text-label-sm text-outline-variant">Madrid Node · Latency 14ms</div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-28 bg-surface/90 backdrop-blur-xl z-40 border-b border-outline-variant/20 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-lg flex items-center justify-between border-b border-outline-variant/15"><div class="flex items-center gap-space-md"><img alt="Atlantic Iberian Sonic Intelligence Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VkVDnl7F2GLbZtqNiLyrJZkzQJ10EOwcl8WhixSl73XuExkjKJ7HkcVxjhaTu0lUALuZx78vnhEs1PV-M0D3DcjyG8IupHLyyASOeefQPssvrh4UFlMBJHRzq1G8x5dr3TX5sPwGRaV9hegakIGEz0kBhmMhReGwH46oig8LVmAx0jU9ZUTVUkoYDSJooPnj7zAcOO3JrPlPdlbs-Fd87kDxmWcVcgYBPBk2GFbrccWX1l0CVWY-eNjVM"/><div class="flex items-center gap-space-sm"><span class="px-space-xs py-0.5 bg-surface-container-highest border border-outline-variant/40 rounded text-on-surface font-label-sm text-label-sm uppercase tracking-wider">ATLANTIC RECORDS</span><span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">SONIC IBERIA</span><span class="font-label-md text-label-md text-outline">// Lifecycle Intelligence</span></div></div><div class="flex items-center gap-space-lg"><div class="hidden xl:flex items-center gap-space-md px-space-md py-1 rounded bg-surface-container-low border border-outline-variant/20"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">SPAIN TOP 50 DAILY</span></div><span class="text-outline font-label-sm">·</span><span class="font-label-sm text-label-sm text-outline">MADRID HQ</span><span class="text-outline font-label-sm">·</span><span class="font-label-sm text-label-sm text-tertiary">50 ENTRIES/DAY SYNCED</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high/60 border border-outline-variant/20 font-label-sm text-label-sm text-on-surface"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>API STATUS: SYNCHRONIZED</span></div><button class="flex items-center gap-space-xs bg-primary-container text-on-primary-container px-space-md py-1.5 rounded font-label-md text-label-md uppercase tracking-wider hover:bg-inverse-primary hover:text-on-primary transition-all shadow-[0_0_12px_rgba(225,29,72,0.35)]" type="button"><span class="material-symbols-outlined text-sm">download</span><span>Generate Executive Brief</span></button><div class="flex items-center gap-space-md pl-space-sm border-l border-outline-variant/30"><div class="relative flex items-center justify-center p-1 rounded-full text-on-surface-variant hover:text-on-surface cursor-pointer"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-primary-container rounded-full ring-2 ring-surface"></span></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLfM8P5Rb7FRVbYqBO2CQ7dhHy5N0_OaPAxqzCDoKItJG9zjQZcTPOiy2zZOBFvjAGxcb2-UJXQ-TfLs3Dio2BqonpuAxZJYGQIqSaSCynJ7H_bLHCA1IetlJwa1NDc2UiX-ASDrQC-GCFjHGvtJ1TbWiUb_zAu79zU82rMMuu6VnkrZOWM7DDYRp-tLnm7CtxI6dTB1fq9KtQemp0GCCDI4WD_yirZMMQueQqSJCpE5yT0LTBpaqM"/><div class="flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-none">Elena Vargas</span><span class="font-label-sm text-label-sm text-outline mt-0.5 leading-none">Head of A&amp;R Strategy</span></div></div></div></div></div><div class="h-12 px-space-lg flex items-center justify-between bg-surface-container-lowest/50 text-on-surface-variant"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container border border-outline-variant/25 text-on-surface font-label-sm text-label-sm cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-tertiary text-sm">calendar_today</span><span>Last 90 Days (Oct 1 - Dec 31)</span><span class="material-symbols-outlined text-outline text-sm">expand_more</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container border border-outline-variant/25 text-on-surface font-label-sm text-label-sm cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-secondary text-sm">filter_alt</span><span>All Stages</span><span class="material-symbols-outlined text-outline text-sm">expand_more</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container border border-outline-variant/25 text-on-surface font-label-sm text-label-sm cursor-pointer hover:border-outline transition-colors"><span class="px-1 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold">E</span><span>Explicit: All [E]</span><span class="material-symbols-outlined text-outline text-sm">expand_more</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container border border-outline-variant/25 text-on-surface font-label-sm text-label-sm cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-outline text-sm">album</span><span>Singles &amp; Albums</span><span class="material-symbols-outlined text-outline text-sm">expand_more</span></div></div><div class="flex items-center"><div class="relative flex items-center w-64"><span class="material-symbols-outlined absolute left-space-sm text-outline text-sm">search</span><input class="w-full bg-surface-container-high/60 border border-outline-variant/30 rounded pl-8 pr-space-sm py-1 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-tertiary focus:ring-1 focus:ring-tertiary transition-all" placeholder="Filter song or artist..." type="text"/></div></div></div></header><main class="relative pt-28 bg-surface flex-1 w-full px-space-margin"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Diagnostic Ticker & Context Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-md py-space-md px-space-lg bg-surface-container-low rounded-xl mb-space-lg shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-primary-container text-on-primary-container rounded">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">speed</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest font-bold">TELEMETRY: DUAL-SPEED REGIME</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Spain Spotify Top 50 Daily Chart Dynamics: Extreme Bottom-Tier Churn Active</span>
+</div>
+<div class="flex items-center gap-space-lg font-label-sm text-label-sm text-outline">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface">SYNC: MADRID T-06:00 UTC</span>
+</div>
+<span>CONFIDENCE: 98.4%</span>
+<span class="text-tertiary">MODEL: CHURN-NET-PROMETHEUS</span>
+</div>
+</div>
+<!-- 1. Executive Telemetry: Churn Rate & Volatility Scorecard -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Metric 1: Weekly Turnover Index -->
+<div class="relative overflow-hidden p-space-lg rounded-xl bg-surface-container-high/60 backdrop-blur-md shadow-md flex flex-col justify-between">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-primary-container/10 blur-xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Weekly Turnover Index</span>
+<span class="material-symbols-outlined text-primary text-sm">autorenew</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-space-xs">
+<span class="font-metric-display text-metric-display text-primary tracking-tight">28.4%</span>
+<span class="font-label-sm text-label-sm text-primary px-space-xs py-0.5 rounded bg-surface-container-highest">+2.1x US VELOCITY</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest/40 rounded p-space-sm">
+<div class="flex justify-between items-center text-outline font-label-sm text-label-sm mb-1">
+<span>US Hot 100: <strong class="text-on-surface font-semibold">14.2%</strong></span>
+<span>UK Top 40: <strong class="text-on-surface font-semibold">16.8%</strong></span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 58%"></div>
+<div class="bg-tertiary h-full" style="width: 24%"></div>
+<div class="bg-outline h-full" style="width: 18%"></div>
+</div>
+</div>
+</div>
+<!-- Metric 2: Friday Release Shockwave Index -->
+<div class="relative overflow-hidden p-space-lg rounded-xl bg-surface-container-high/60 backdrop-blur-md shadow-md flex flex-col justify-between">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-secondary/10 blur-xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Friday Shockwave Index</span>
+<span class="material-symbols-outlined text-secondary text-sm">bolt</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-space-xs">
+<span class="font-metric-display text-metric-display text-secondary tracking-tight">6.8</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">NEW ENTRIES / FRIDAY</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm">
+<p class="font-body-sm text-body-sm text-outline leading-tight">
+          Weekend algorithmic cannibalization peak. Replaces ~13.6% of entire chart overnight.
+        </p>
+<div class="flex items-center gap-space-xs mt-space-xs font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+<span>Peak Shockwave: 9 entries on Nov 17</span>
+</div>
+</div>
+</div>
+<!-- Metric 3: Mean Half-Life Top 10 -->
+<div class="relative overflow-hidden p-space-lg rounded-xl bg-surface-container-high/60 backdrop-blur-md shadow-md flex flex-col justify-between">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-tertiary/10 blur-xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Top 10 Mean Half-Life</span>
+<span class="material-symbols-outlined text-tertiary text-sm">timelapse</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-space-xs">
+<span class="font-metric-display text-metric-display text-tertiary tracking-tight">21.5</span>
+<span class="font-label-sm text-label-sm text-tertiary">DAYS IN TOP 10</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest/40 rounded p-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Vs. Rest of Chart (40-50):</span>
+<span class="font-label-md text-label-md text-primary font-bold">4.2 Days Mean</span>
+</div>
+</div>
+<!-- Metric 4: Re-entry Recirculation Rate -->
+<div class="relative overflow-hidden p-space-lg rounded-xl bg-surface-container-high/60 backdrop-blur-md shadow-md flex flex-col justify-between">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-primary/10 blur-xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Re-entry Recirculation</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm">u_turn_left</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">4.1%</span>
+<span class="font-label-sm text-label-sm text-outline">FALL-OFF &amp; BOUNCE</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline mb-1">
+<span>TikTok Surge Bounce</span>
+<span class="text-tertiary">71% attributed</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full" style="width: 71%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. Dual Panel: Inflow/Outflow Stream Chart & Day-of-Week Volatility Matrix -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-lg">
+<!-- Left: Daily Net Flow (Inflow vs Outflow) + Retention -->
+<div class="xl:col-span-8 p-space-lg rounded-xl bg-surface-container-low/70 backdrop-blur-xl shadow-md flex flex-col">
+<div class="flex flex-wrap items-center justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-tertiary-container text-on-tertiary-container uppercase tracking-wider">FLOW ENGINE</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Daily Entry vs Exit Churn Stream</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Rolling 14-day tracking of Spain Top 50 entrants against dropouts with retention baseline</p>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-sm bg-tertiary"></span>
+<span class="text-on-surface">New Entries (+)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-sm bg-primary-container"></span>
+<span class="text-on-surface">Chart Dropouts (-)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-4 h-0.5 bg-secondary"></span>
+<span class="text-secondary font-medium">Net Retention Trend</span>
+</div>
+</div>
+</div>
+<!-- High Visual Impact SVG Chart -->
+<div class="w-full overflow-x-auto">
+<div class="min-w-[620px]">
+<svg class="w-full h-64 text-outline" fill="none" viewbox="0 0 700 240">
+<!-- Background grid lines -->
+<line stroke="currentColor" stroke-dasharray="4 4" stroke-opacity="0.1" x1="0" x2="700" y1="40" y2="40"></line>
+<line stroke="currentColor" stroke-opacity="0.2" x1="0" x2="700" y1="120" y2="120"></line>
+<line stroke="currentColor" stroke-dasharray="4 4" stroke-opacity="0.1" x1="0" x2="700" y1="200" y2="200"></line>
+<text class="text-[9px] font-mono" fill="currentColor" opacity="0.5" x="5" y="38">+8 ENTRIES</text>
+<text class="text-[9px] font-mono" fill="currentColor" opacity="0.6" x="5" y="118">0 NEUTRAL (NET)</text>
+<text class="text-[9px] font-mono" fill="currentColor" opacity="0.5" x="5" y="198">-8 EXITS</text>
+<!-- Bars for 14 Days -->
+<!-- D1 Fri -->
+<rect fill="#4cd7f6" fill-opacity="0.9" height="68" rx="2" width="16" x="40" y="52"></rect>
+<rect fill="#e11d48" fill-opacity="0.8" height="42" rx="2" width="16" x="40" y="120"></rect>
+<!-- D2 Sat -->
+<rect fill="#4cd7f6" fill-opacity="0.9" height="50" rx="2" width="16" x="85" y="70"></rect>
+<rect fill="#e11d48" fill-opacity="0.8" height="34" rx="2" width="16" x="85" y="120"></rect>
+<!-- D3 Sun -->
+<rect fill="#4cd7f6" fill-opacity="0.8" height="18" rx="2" width="16" x="130" y="102"></rect>
+<rect fill="#e11d48" fill-opacity="0.8" height="26" rx="2" width="16" x="130" y="120"></rect>
+<!-- D4 Mon -->
+<rect fill="#4cd7f6" fill-opacity="0.8" height="14" rx="2" width="16" x="175" y="106"></rect>
+<rect fill="#e11d48" fill-opacity="0.8" height="30" rx="2" width="16" x="175" y="120"></rect>
+<!-- D5 Tue (Severe Drops) -->
+<rect fill="#4cd7f6" fill-opacity="0.8" height="8" rx="2" width="16" x="220" y="112"></rect>
+<rect fill="#e11d48" fill-opacity="0.9" height="60" rx="2" width="16" x="220" y="120"></rect>
+<!-- D6 Wed -->
+<rect fill="#4cd7f6" fill-opacity="0.8" height="12" rx="2" width="16" x="265" y="108"></rect>
+<rect fill="#e11d48" fill-opacity="0.8" height="20" rx="2" width="16" x="265" y="120"></rect>
+<!-- D7 Thu -->
+<rect fill="#4cd7f6" fill-opacity="0.8" height="16" rx="2" width="16" x="310" y="104"></rect>
+<rect fill="#e11d48" fill-opacity="0.8" height="16" rx="2" width="16" x="310" y="120"></rect>
+<!-- D8 Fri (Mega Release) -->
+<rect fill="#4cd7f6" height="76" rx="2" width="16" x="355" y="44"></rect>
+<rect fill="#e11d48" height="68" rx="2" width="16" x="355" y="120"></rect>
+<!-- D9 Sat -->
+<rect fill="#4cd7f6" fill-opacity="0.9" height="54" rx="2" width="16" x="400" y="66"></rect>
+<rect fill="#e11d48" fill-opacity="0.8" height="38" rx="2" width="16" x="400" y="120"></rect>
+<!-- D10 Sun -->
+<rect fill="#4cd7f6" fill-opacity="0.8" height="20" rx="2" width="16" x="445" y="100"></rect>
+<rect fill="#e11d48" fill-opacity="0.8" height="24" rx="2" width="16" x="445" y="120"></rect>
+<!-- D11 Mon -->
+<rect fill="#4cd7f6" fill-opacity="0.8" height="15" rx="2" width="16" x="490" y="105"></rect>
+<rect fill="#e11d48" fill-opacity="0.8" height="34" rx="2" width="16" x="490" y="120"></rect>
+<!-- D12 Tue (Post-Weekend purge) -->
+<rect fill="#4cd7f6" fill-opacity="0.8" height="6" rx="2" width="16" x="535" y="114"></rect>
+<rect fill="#e11d48" fill-opacity="0.9" height="58" rx="2" width="16" x="535" y="120"></rect>
+<!-- D13 Wed -->
+<rect fill="#4cd7f6" fill-opacity="0.8" height="14" rx="2" width="16" x="580" y="106"></rect>
+<rect fill="#e11d48" fill-opacity="0.8" height="22" rx="2" width="16" x="580" y="120"></rect>
+<!-- D14 Thu (Yesterday) -->
+<rect fill="#4cd7f6" fill-opacity="0.8" height="22" rx="2" width="16" x="625" y="98"></rect>
+<rect fill="#e11d48" fill-opacity="0.8" height="18" rx="2" width="16" x="625" y="120"></rect>
+<!-- Net Retention Curve (Amber spline) -->
+<path d="M48,94 Q93,98 138,112 T228,154 T318,120 T408,98 T498,126 T588,124 T633,116" fill="none" stroke="#ffb95f" stroke-width="2.5"></path>
+<!-- Nodes along curve -->
+<circle cx="48" cy="94" fill="#ffb95f" r="3.5"></circle>
+<circle cx="228" cy="154" fill="#e11d48" r="3.5"></circle>
+<circle cx="363" cy="112" fill="#ffb95f" r="3.5"></circle>
+<circle cx="543" cy="148" fill="#e11d48" r="3.5"></circle>
+<circle cx="633" cy="116" fill="#4cd7f6" r="3.5"></circle>
+<!-- X Axis Labels -->
+<text class="text-[9px] font-mono" fill="currentColor" opacity="0.6" x="40" y="232">FRI 15</text>
+<text class="text-[9px] font-mono" fill="currentColor" opacity="0.6" x="85" y="232">SAT 16</text>
+<text class="text-[9px] font-mono" fill="currentColor" opacity="0.6" x="130" y="232">SUN 17</text>
+<text class="text-[9px] font-mono" fill="currentColor" opacity="0.6" x="175" y="232">MON 18</text>
+<text class="text-[9px] font-mono font-bold" fill="#e11d48" x="220" y="232">TUE 19</text>
+<text class="text-[9px] font-mono" fill="currentColor" opacity="0.6" x="265" y="232">WED 20</text>
+<text class="text-[9px] font-mono" fill="currentColor" opacity="0.6" x="310" y="232">THU 21</text>
+<text class="text-[9px] font-mono font-bold" fill="#4cd7f6" x="355" y="232">FRI 22</text>
+<text class="text-[9px] font-mono" fill="currentColor" opacity="0.6" x="400" y="232">SAT 23</text>
+<text class="text-[9px] font-mono" fill="currentColor" opacity="0.6" x="445" y="232">SUN 24</text>
+<text class="text-[9px] font-mono" fill="currentColor" opacity="0.6" x="490" y="232">MON 25</text>
+<text class="text-[9px] font-mono font-bold" fill="#e11d48" x="535" y="232">TUE 26</text>
+<text class="text-[9px] font-mono" fill="currentColor" opacity="0.6" x="580" y="232">WED 27</text>
+<text class="text-[9px] font-mono" fill="currentColor" opacity="0.6" x="625" y="232">THU 28</text>
+</svg>
+</div>
+</div>
+<!-- Quick Analysis Callout -->
+<div class="mt-space-md pt-space-sm flex flex-wrap items-center justify-between gap-space-sm bg-surface-container rounded-lg px-space-md py-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">warning</span>
+<span class="font-bold">A&amp;R TAKEAWAY:</span>
+<span class="text-on-surface">Tuesday drops average 6.4 tracks as weekend-boosted club tracks crash back to reality without playlist carry-over.</span>
+</div>
+<div class="font-label-sm text-label-sm text-outline">
+          Net Volatility Coefficient: <span class="text-tertiary font-bold">0.82 (High)</span>
+</div>
+</div>
+</div>
+<!-- Right: Day-of-Week Volatility Matrix + Monthly Churn Progression -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Matrix Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-low/70 backdrop-blur-xl shadow-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">MATRIX 01</span>
+<span class="font-label-sm text-label-sm text-outline">SPAIN 90-DAY AVG</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Day-of-Week Churn Intensity</h3>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Madrid Spotify Top 50 movement patterns</p>
+<div class="grid grid-cols-7 gap-1 mt-space-md text-center">
+<div class="font-label-sm text-label-sm text-outline">MON</div>
+<div class="font-label-sm text-label-sm text-primary font-bold">TUE</div>
+<div class="font-label-sm text-label-sm text-outline">WED</div>
+<div class="font-label-sm text-label-sm text-outline">THU</div>
+<div class="font-label-sm text-label-sm text-tertiary font-bold">FRI</div>
+<div class="font-label-sm text-label-sm text-tertiary font-bold">SAT</div>
+<div class="font-label-sm text-label-sm text-outline">SUN</div>
+<!-- Heatmap blocks: Inflows -->
+<div class="h-10 rounded flex flex-col items-center justify-center bg-surface-container-high text-[11px] font-mono text-outline">
+<span>+1.8</span>
+<span class="text-[9px] opacity-70">in</span>
+</div>
+<div class="h-10 rounded flex flex-col items-center justify-center bg-surface-container-high text-[11px] font-mono text-outline">
+<span>+0.9</span>
+<span class="text-[9px] opacity-70">in</span>
+</div>
+<div class="h-10 rounded flex flex-col items-center justify-center bg-surface-container-high text-[11px] font-mono text-outline">
+<span>+1.4</span>
+<span class="text-[9px] opacity-70">in</span>
+</div>
+<div class="h-10 rounded flex flex-col items-center justify-center bg-surface-container-high text-[11px] font-mono text-outline">
+<span>+1.9</span>
+<span class="text-[9px] opacity-70">in</span>
+</div>
+<div class="h-10 rounded flex flex-col items-center justify-center bg-tertiary-container text-on-tertiary-container font-bold text-[11px] font-mono shadow-sm">
+<span>+6.8</span>
+<span class="text-[9px] opacity-90">SURGE</span>
+</div>
+<div class="h-10 rounded flex flex-col items-center justify-center bg-surface-container-highest text-tertiary font-bold text-[11px] font-mono">
+<span>+4.2</span>
+<span class="text-[9px] opacity-80">in</span>
+</div>
+<div class="h-10 rounded flex flex-col items-center justify-center bg-surface-container-high text-[11px] font-mono text-outline">
+<span>+2.1</span>
+<span class="text-[9px] opacity-70">in</span>
+</div>
+<!-- Heatmap blocks: Outflows -->
+<div class="h-10 rounded flex flex-col items-center justify-center bg-surface-container-high text-[11px] font-mono text-outline">
+<span>-3.2</span>
+<span class="text-[9px] opacity-70">out</span>
+</div>
+<div class="h-10 rounded flex flex-col items-center justify-center bg-primary-container text-on-primary-container font-bold text-[11px] font-mono shadow-sm">
+<span>-6.4</span>
+<span class="text-[9px] opacity-90">PURGE</span>
+</div>
+<div class="h-10 rounded flex flex-col items-center justify-center bg-surface-container-high text-[11px] font-mono text-outline">
+<span>-2.1</span>
+<span class="text-[9px] opacity-70">out</span>
+</div>
+<div class="h-10 rounded flex flex-col items-center justify-center bg-surface-container-high text-[11px] font-mono text-outline">
+<span>-1.7</span>
+<span class="text-[9px] opacity-70">out</span>
+</div>
+<div class="h-10 rounded flex flex-col items-center justify-center bg-surface-container-highest text-primary font-bold text-[11px] font-mono">
+<span>-5.9</span>
+<span class="text-[9px] opacity-80">out</span>
+</div>
+<div class="h-10 rounded flex flex-col items-center justify-center bg-surface-container-high text-[11px] font-mono text-outline">
+<span>-3.1</span>
+<span class="text-[9px] opacity-70">out</span>
+</div>
+<div class="h-10 rounded flex flex-col items-center justify-center bg-surface-container-high text-[11px] font-mono text-outline">
+<span>-2.4</span>
+<span class="text-[9px] opacity-70">out</span>
+</div>
+</div>
+</div>
+<!-- Monthly Churn Escalation Bar -->
+<div class="mt-space-md pt-space-md bg-surface-container rounded-lg p-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Quarterly Churn Trajectory</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">+9.1% Q4 Ramp</span>
+</div>
+<div class="space-y-space-xs mt-space-sm font-label-sm text-label-sm">
+<div>
+<div class="flex justify-between text-outline mb-1">
+<span>OCTOBER</span>
+<span class="text-on-surface">24.1% Churn</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded overflow-hidden">
+<div class="bg-outline h-full" style="width: 48%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-outline mb-1">
+<span>NOVEMBER</span>
+<span class="text-on-surface">28.7% Churn</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded overflow-hidden">
+<div class="bg-secondary h-full" style="width: 65%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-on-surface font-semibold mb-1">
+<span class="text-primary">DECEMBER (HOLIDAY SHOCK)</span>
+<span class="text-primary font-bold">33.2% Churn</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded overflow-hidden">
+<div class="bg-primary-container h-full" style="width: 84%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Spain vs US/UK Market Structural Comparison Widget -->
+<div class="p-space-lg rounded-xl bg-surface-container-low/70 backdrop-blur-xl shadow-md mb-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-space-md mb-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="p-2 rounded bg-surface-container-highest text-tertiary">
+<span class="material-symbols-outlined text-lg">compare_arrows</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest font-bold">TERRITORY BENCHMARK</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Spain vs International Structural Dynamics</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Granular divergence in velocity, user appetite for novelty, and chart defense architectures</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm px-space-md py-1.5 rounded bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-sm text-secondary">insights</span>
+<span>A&amp;R Strategic Implication: Frontload Marketing Spend Day 0–7 in Iberia</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Comparative Card 1: Freshness Preference -->
+<div class="p-space-md rounded-lg bg-surface-container-high/40 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Novelty Velocity</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-tertiary-container text-on-tertiary-container">+41% VS US</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Freshness Preference</h4>
+<p class="font-body-sm text-body-sm text-outline mt-space-xs">
+            Consumption share of tracks &lt;14 days old in Spain accounts for <strong class="text-on-surface">34.8%</strong> of total Top 50 streams, vs only <strong class="text-on-surface">20.4%</strong> in the US and <strong class="text-on-surface">22.1%</strong> in the UK.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest/50 rounded p-space-sm">
+<div class="flex justify-between items-center font-label-sm text-label-sm mb-1 text-outline">
+<span>Spain: 34.8%</span>
+<span>US Hot 100: 20.4%</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden flex">
+<div class="bg-tertiary h-full" style="width: 63%"></div>
+<div class="bg-outline h-full" style="width: 37%"></div>
+</div>
+<span class="block mt-1 font-label-sm text-label-sm text-tertiary">Spanish listeners cycle trending reggaeton/trap twice as fast.</span>
+</div>
+</div>
+<!-- Comparative Card 2: Playlist Slot Friction -->
+<div class="p-space-md rounded-lg bg-surface-container-high/40 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Dual-Speed Polarity</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container">62% RETENTION GAP</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Playlist Slot Friction</h4>
+<p class="font-body-sm text-body-sm text-outline mt-space-xs">
+            Spain functions as a fortress top tier vs turbulent gutter. Top 10 tracks stay locked for an average 38.6 days, while slots 40-50 experience massive volatility (turnover every 3.8 days).
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest/50 rounded p-space-sm space-y-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-secondary font-semibold">Slots 01–10 (Fortress):</span>
+<span class="text-on-surface font-mono">38.6 Days Mean</span>
+</div>
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-primary font-semibold">Slots 41–50 (Turbulence):</span>
+<span class="text-on-surface font-mono">3.8 Days Mean</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden flex mt-1">
+<div class="bg-secondary h-full" style="width: 82%"></div>
+<div class="bg-primary h-full" style="width: 18%"></div>
+</div>
+</div>
+</div>
+<!-- Comparative Card 3: Survival Probability by Entry Rank -->
+<div class="p-space-md rounded-lg bg-surface-container-high/40 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Predictive Longevity</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container">ENTRY SENSITIVITY</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Survival by Entry Rank</h4>
+<p class="font-body-sm text-body-sm text-outline mt-space-xs">
+            Tracks entering Spain Top 50 in positions 1–20 have an <strong class="text-on-surface">88% probability</strong> of enduring 30+ days. In contrast, tracks debuting at 40–50 face a <strong class="text-primary font-semibold">76% dropout rate</strong> within 10 days.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest/50 rounded p-space-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface">Debut Rank 01–20</span>
+<span class="text-tertiary font-bold font-mono">88% 30-Day Survival</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mb-2">
+<div class="bg-tertiary h-full" style="width: 88%"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface">Debut Rank 41–50</span>
+<span class="text-primary font-bold font-mono">24% 10-Day Survival</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 24%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Churn Risk Radar & Track Re-Entry Watchlist -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- Critical Churn Risk Radar (Left 8 Cols) -->
+<div class="xl:col-span-8 p-space-lg rounded-xl bg-surface-container-low/70 backdrop-blur-xl shadow-md flex flex-col">
+<div class="flex flex-wrap items-center justify-between gap-space-md mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Churn Risk Radar // Immediate Drop Candidates</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Algorithmic risk model forecasting track exits from Spain Top 50 within 24 to 48 hours</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-sm py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">tune</span>
+<span>Filter Threshold: &gt;75% Risk</span>
+</button>
+</div>
+</div>
+<!-- Risk Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-lowest/80 text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md">Rank</th>
+<th class="py-space-sm px-space-md">Track &amp; Artist</th>
+<th class="py-space-sm px-space-md">Days On</th>
+<th class="py-space-sm px-space-md">Trajectory 7D</th>
+<th class="py-space-sm px-space-md">Exit Risk Probability</th>
+<th class="py-space-sm px-space-md text-right">A&amp;R Tactical Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1: High Danger -->
+<tr class="hover:bg-surface-container-high/50 transition-colors bg-surface-container-high/20">
+<td class="py-space-md px-space-md font-label-md text-label-md text-primary font-bold">#48</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded bg-surface-container-highest overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Cover artwork for dark electronic urban song with moody red neon lighting and modern typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1eT3_CNdbgXEBBVGIg8teBbEcYMvvayL3-W4DcUY1fZevdg6V5jWcVgyU3g5C4Wy4g99wY9-f6oXlirIO2aCinrB3I9WxHQGSQLXAbSHKpfPC8gx7v38Q6Wos5bNP_ZJluDmhsycZ-tf9UR9Ku-7YsqR64un11MzaCrEJVsEIs0t6SE61JGVQDWarECZc8gaYMZQPFoYOY-hM1qiGUYs0NJGr2V_ytZ_iNmGDQhrS0tHzUKCakGFv"/>
+</div>
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Bailando en la Oscuridad</div>
+<div class="font-body-sm text-body-sm text-outline truncate">Mikel Serrano • Atlantic Iberia</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-on-surface">5d</td>
+<td class="py-space-md px-space-md">
+<!-- Mini Sparkline downward -->
+<svg class="w-20 h-6 text-primary" fill="none" viewbox="0 0 80 24">
+<path d="M2 4 L20 6 L40 12 L60 18 L78 22" stroke="currentColor" stroke-width="2"></path>
+<circle cx="78" cy="22" fill="currentColor" r="2.5"></circle>
+</svg>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold animate-pulse">91% EXIT / 24H</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container text-primary hover:bg-primary-container hover:text-on-primary-container font-label-sm text-label-sm uppercase tracking-wider transition-colors" type="button">
+                  Inject Editorial Push
+                </button>
+</td>
+</tr>
+<!-- Row 2: Severe Drop Candidate -->
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="py-space-md px-space-md font-label-md text-label-md text-primary font-bold">#46</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded bg-surface-container-highest overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Album cover for Spanish summer rhythm pop track with warm amber backlight and sunset tint" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy1hRJMAE7gK7KhnPA14ej4NDhWPDmf6AXw3UVyzruhp2lm-XnJOv8u9rPiC3VBJcL74DDQcaRHgYMFAhpboy3MZwAqkwRifigW-qasVjUEuu56A7nTKqAKu404mOH09dWRqRRTWTFhGfWdJeJouMJr5quDAQxWw0ufgoYj34IDQ-4nak_m-4ILHCse6PD9rG5CPF84dApZ8RPURRRT0KE4yk-TSXqf8Ul3K3fZHgv-Y5POagyX9hK"/>
+</div>
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Tarde en Chamberí</div>
+<div class="font-body-sm text-body-sm text-outline truncate">Sofia &amp; Los Vientos • Warner Spain</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-on-surface">8d</td>
+<td class="py-space-md px-space-md">
+<svg class="w-20 h-6 text-primary" fill="none" viewbox="0 0 80 24">
+<path d="M2 5 L20 8 L40 10 L60 16 L78 20" stroke="currentColor" stroke-width="2"></path>
+<circle cx="78" cy="20" fill="currentColor" r="2.5"></circle>
+</svg>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">84% EXIT / 48H</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container text-secondary hover:bg-secondary-container hover:text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider transition-colors" type="button">
+                  Re-pitch Algorithmic
+                </button>
+</td>
+</tr>
+<!-- Row 3: Mature Peak Decay -->
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="py-space-md px-space-md font-label-md text-label-md text-secondary font-bold">#42</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded bg-surface-container-highest overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Cover of Madrid urban rap single with minimalist geometric chrome emblem on matte black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9adWphp6PzklzPH3cEazrGlcLaAPwTp-cGwX97d9QOnvsqkPfwGiAW1w1k7ABnYE7-UMEF3rplZrnQMKvk6TLlEFcYp7qNEEQ8kuSoV0X8d3kne2Idqigb_Sq3j1kAjbI0JmXuzIesU429y108zQWTY2zNm9AwjJRvKxiBIYAO3ouR6hG8WroTq-7FQLeTdP6TP695-llNTjlEmPShbdTZv9WOiaQxRpkSOj7AN8O20ws89t8_M-j"/>
+</div>
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Costanilla 14</div>
+<div class="font-body-sm text-body-sm text-outline truncate">Kike R • Indie / Sony Dist.</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-on-surface">44d</td>
+<td class="py-space-md px-space-md">
+<svg class="w-20 h-6 text-secondary" fill="none" viewbox="0 0 80 24">
+<path d="M2 10 L20 12 L40 15 L60 18 L78 21" stroke="currentColor" stroke-width="2"></path>
+<circle cx="78" cy="21" fill="currentColor" r="2.5"></circle>
+</svg>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm font-bold">78% DECAY CONFIRM</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container text-outline hover:text-on-surface font-label-sm text-label-sm uppercase tracking-wider transition-colors" type="button">
+                  Harvest Residual
+                </button>
+</td>
+</tr>
+<!-- Row 4: Friday Inflow Casualty Target -->
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="py-space-md px-space-md font-label-md text-label-md text-primary font-bold">#49</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded bg-surface-container-highest overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Artwork representing modern latin flamenco pop single, crimson background with sharp metallic typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9NOJwvCWgvkvdXOlzgoPeIPH31Z33IF_xHWxQEtuyieNsRloy7JJzqIoh9n2mO6kVaFYeUQvquYo5JaaMwJVpVxye8GowvT1uTiCdVaOwwH6cIrPw6JIgOVT44RmxnUageJjbpaj5WH3VxN0t3OYh0EI75bqPRRvurICDE_djuClIIA0t0T8kcoxaY5KqQMCIKQwJVKyBzMIAqpvu_HMTNiitWpaaplbR_rBg8KzHwKiHBl0-ktom"/>
+</div>
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Gris &amp; Alabastro</div>
+<div class="font-body-sm text-body-sm text-outline truncate">Clara Nieve • Universal ES</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-on-surface">3d</td>
+<td class="py-space-md px-space-md">
+<svg class="w-20 h-6 text-primary" fill="none" viewbox="0 0 80 24">
+<path d="M2 2 L25 8 L50 16 L78 23" stroke="currentColor" stroke-width="2"></path>
+<circle cx="78" cy="23" fill="currentColor" r="2.5"></circle>
+</svg>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold">89% EXIT / 24H</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container text-outline hover:text-on-surface font-label-sm text-label-sm uppercase tracking-wider transition-colors" type="button">
+                  Audit DSP Drops
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Re-entry Watchlist & Predictive Resurgence (Right 4 Cols) -->
+<div class="xl:col-span-4 p-space-lg rounded-xl bg-surface-container-low/70 backdrop-blur-xl shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest font-bold">RECIRCULATION DESK</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">4.1% PROB. POOL</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Track Re-entry Watchlist</h3>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Off-chart tracks (51–75) exhibiting algorithmic velocity surges towards re-entry</p>
+<div class="mt-space-md space-y-space-sm">
+<!-- Item 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/50 flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="font-mono text-tertiary font-bold text-label-md">#53</span>
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">Madrid Skyline</div>
+<div class="font-body-sm text-body-sm text-outline truncate">Alonso Diaz • +28% TikTok 48h</div>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="px-space-xs py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold">82% RE-ENTRY</span>
+<div class="font-label-sm text-label-sm text-tertiary mt-0.5">+14 Pos Today</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/50 flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="font-mono text-tertiary font-bold text-label-md">#58</span>
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">Cero Sentimientos</div>
+<div class="font-body-sm text-body-sm text-outline truncate">Valeria Vega • Radio Sync Wave</div>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-tertiary font-label-sm text-label-sm font-bold">67% RE-ENTRY</span>
+<div class="font-label-sm text-label-sm text-outline mt-0.5">Exited 3d ago</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/50 flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="font-mono text-secondary font-bold text-label-md">#64</span>
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">Frecuencia Cero</div>
+<div class="font-body-sm text-body-sm text-outline truncate">Marcos &amp; Rueda • Club Play surge</div>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm font-bold">54% RE-ENTRY</span>
+<div class="font-label-sm text-label-sm text-outline mt-0.5">Fri Night target</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Action Footnote -->
+<div class="mt-space-md pt-space-md bg-surface-container-lowest/60 rounded-lg p-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">A&amp;R Strategic Re-Entry Pitch</span>
+<span class="material-symbols-outlined text-tertiary text-sm">open_in_new</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Automated batch trigger available for Spotify <span class="text-on-surface font-semibold">Éxitos España</span> placement pitch queue.
+        </p>
+<button class="w-full mt-space-sm py-1.5 rounded bg-surface-container-high text-on-surface hover:bg-tertiary-container hover:text-on-tertiary-container font-label-sm text-label-sm uppercase tracking-wider transition-all" type="button">
+          Trigger Auto-Pitch Module (3 Candidates)
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
